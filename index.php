@@ -10,6 +10,7 @@ if (isset($_SESSION['redirect_to']) && ($_SESSION['redirect_to'] != '')) {
 	$redirect = $_SESSION['redirect_to'];
 	unset($_SESSION['redirect_to']);
 }
+$return = false;
 ?>
 <!DOCTYPE html>
 <html lang="en">

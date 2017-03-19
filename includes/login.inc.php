@@ -7,8 +7,8 @@ function validateUser($userid, $email) {
 	$_SESSION['activeToken'] = userActiveToken();
 }
 
-function isLoggedIn() {
-	return true;
+function isLoggedIn($return = false) {
+	return $return;
 /*
 	if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity'] > SESSION_TIMEOUT)) {
 		logout("login.php");

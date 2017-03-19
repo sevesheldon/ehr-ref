@@ -1,31 +1,43 @@
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-<?php if (!isLoggedIn()): ?>
-                <a class="navbar-brand" href="index.php">Home</a>
-<?php else: ?>
-                <a class="navbar-brand" href="encounter.php">New E/M Encounter</a>
-<?php endif; ?>
+                <a class="navbar-brand page-scroll" href="#page-top">EHR</a>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+<?php if (isLoggedIn($return)): ?>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
-<?php if (isLoggedIn()): ?>
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#cc">Chief Complaint</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#history">History</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#exam">Physical Exam</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#mdm">Medical Decision Making</a>
+                    </li>
                     <li>
                         <a href="logout.php">Logout</a>
                     </li>
-<?php endif; ?>
                 </ul>
+				<div class="code-container">
+					<input type="text" class="form-control" id="targetcode" placeholder="Target Code">
+				</div>
             </div>
-            <!-- /.navbar-collapse -->
+<?php endif; ?>
         </div>
-        <!-- /.container -->
     </nav>
