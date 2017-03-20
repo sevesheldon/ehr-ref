@@ -39,14 +39,16 @@ html {
 	}
 }
 
+.cc-section {
+	padding-top: 120px;
+}
+
 .target-section,
-.cc-section,
 .history-section,
 .exam-section,
 .mdm-section {
-    height: 50%;
-    padding-top: 150px;
-    text-align: center;
+    /*height: 50%;*/
+    padding-top: 50px;
     background: #fff;
 }
 
