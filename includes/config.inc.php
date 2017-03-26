@@ -15,7 +15,7 @@ if (isset($_SERVER['APPLICATION_ENV']) && $_SERVER['APPLICATION_ENV'] == 'dev') 
 			date(DATE_RSS, time()) . "\n\t{$errstr} \nOccurred in {$errfile}:{$errline}\n" . "\n", 3, BASE_PATH . '/error.log'
 		);
 	}
-	define("BASE_PATH", $_SERVER['DOCUMENT_ROOT'] . "/dev/wf/");
+	define("BASE_PATH", $_SERVER['DOCUMENT_ROOT'] . "/dev/ehr/");
 	set_error_handler("myErrorHandler");
 	set_exception_handler("myErrorHandler");
 }

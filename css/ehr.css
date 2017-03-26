@@ -39,6 +39,19 @@ html {
 	}
 }
 
+h1 {
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+section {
+	margin-bottom: 10px;
+}
+
+#history h1 {
+	margin-top: 10px;
+}
+
 .cc-section {
 	padding-top: 120px;
 }
@@ -55,4 +68,55 @@ html {
 
 #targetcode {
 	width: 105px;
+}
+
+
+.form-group .checkbox label {
+	width: 100%;
+}
+
+.ROSsingles .checkbox, 
+.PEsingles .checkbox, 
+#PEform .checkbox {
+	margin-top: 0px;
+}
+
+.ROSsingles .form-group,
+.PEsingles .form-group {
+	margin-bottom: 0px;
+}
+
+.ROSsingles label,
+.PEsingles label {
+	font-weight: normal;
+}
+
+.ROSsingles .form-group .checkbox input[type=checkbox],
+.PEsingles .form-group .checkbox input[type=checkbox] {
+	margin-left: 0px;
+}
+
+#PEform section div h4,
+#PEform section div .h4 {
+	margin-top: 2px;
+}
+
+#PEform .form-group div label.col-sm-8 {
+	padding-left: 0px;
+}
+
+#PEform .col-sm-4 div.row + div.row {
+	margin-top: 20px;
+}
+
+.PEsingles {
+	margin-top: 20px;
+}
+
+.PEsingles label[for=PEmood] {
+	font-weight: 700;
+}
+
+.PEsingles .row:last-child {
+	margin-top: 20px;
 }

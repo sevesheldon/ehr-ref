@@ -49,7 +49,7 @@ $return = true;
     <section id="cc" class="cc-section">
         <div class="container">
             <div class="row">
-                <div class="col-sm-10 col-sm-offset-1 form-horizontal">
+                <div class="col-sm-10 form-horizontal">
 					<div class="form-group form-group-lg">
 						<label for="chiefcomplaint" class="col-sm-4 control-label">Chief Complaint</label>
 						<div class="col-sm-8">
@@ -68,48 +68,53 @@ $return = true;
                     <h1 class="text-center">History</h1>
 					<h2 class="text-center">HPI</h2>
 					<form id="HPIform">
-						<div class="form-group col-sm-12">
-							<label for="HPIname" class="col-sm-2 control-label">Name of Illness</label>
-							<div class="col-sm-10">
-								<input type="text" class="form-control" id="HPIname">
+						<section class="clearfix">
+							<div class="form-group col-sm-12">
+								<label for="HPIname" class="col-sm-2 control-label">Name of Illness</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="HPIname">
+								</div>
 							</div>
-						</div>
-						<div class="form-group col-sm-6">
-							<label for="HPIduration" class="col-sm-4 control-label">Duration</label>
-							<div class="col-sm-8">
-								<input type="text" class="form-control" id="HPIduration">
+						</section>
+						
+						<section class="clearfix">
+							<div class="form-group col-sm-6">
+								<label for="HPIduration" class="col-sm-4 control-label">Duration</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" id="HPIduration">
+								</div>
+								<label for="HPIsymptoms" class="col-sm-5 control-label">Associated signs/symptoms</label>
+								<div class="col-sm-7">
+									<input type="text" class="form-control" id="HPIsymptoms">
+								</div>
+								<label for="HPItiming" class="col-sm-4 control-label">Timing</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" id="HPItiming" placeholder="constant or intermittent">
+								</div>
+								<label for="HPIseverity" class="col-sm-4 control-label">Severity</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" id="HPIseverity" placeholder="mild or severe">
+								</div>
 							</div>
-							<label for="HPIsymptoms" class="col-sm-5 control-label">Associated signs/symptoms</label>
-							<div class="col-sm-7">
-								<input type="text" class="form-control" id="HPIsymptoms">
+							<div class="form-group col-sm-6">
+								<label for="HPIcontext" class="col-sm-4 control-label">Context</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" id="HPIcontext" placeholder="setting in which the problem started or occurs">
+								</div>
+								<label for="HPIfactors" class="col-sm-4 control-label">Modifying Factors</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" id="HPIfactors" placeholder="what changes the symptoms?">
+								</div>
+								<label for="HPIlocation" class="col-sm-4 control-label">Location in the body</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" id="HPIlocation">
+								</div>
+								<label for="HPIquality" class="col-sm-4 control-label">Quality</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" id="HPIquality">
+								</div>
 							</div>
-							<label for="HPItiming" class="col-sm-4 control-label">Timing</label>
-							<div class="col-sm-8">
-								<input type="text" class="form-control" id="HPItiming" placeholder="constant or intermittent">
-							</div>
-							<label for="HPIseverity" class="col-sm-4 control-label">Severity</label>
-							<div class="col-sm-8">
-								<input type="text" class="form-control" id="HPIseverity" placeholder="mild or severe">
-							</div>
-						</div>
-						<div class="form-group col-sm-6">
-							<label for="HPIcontext" class="col-sm-4 control-label">Context</label>
-							<div class="col-sm-8">
-								<input type="text" class="form-control" id="HPIcontext" placeholder="setting in which the problem started or occurs">
-							</div>
-							<label for="HPIfactors" class="col-sm-4 control-label">Modifying Factors</label>
-							<div class="col-sm-8">
-								<input type="text" class="form-control" id="HPIfactors" placeholder="what changes the symptoms?">
-							</div>
-							<label for="HPIlocation" class="col-sm-4 control-label">Location in the body</label>
-							<div class="col-sm-8">
-								<input type="text" class="form-control" id="HPIlocation">
-							</div>
-							<label for="HPIquality" class="col-sm-4 control-label">Quality</label>
-							<div class="col-sm-8">
-								<input type="text" class="form-control" id="HPIquality">
-							</div>
-						</div>
+						</section>
 					</form>
                 </div>
             </div>
@@ -117,9 +122,9 @@ $return = true;
 			<div class="row" id="PFSH">
                 <div class="col-sm-12">
 					<h2 class="text-center">PFSH - Past medical, family, and social history</h2>
-					<p class="text-center">Write complete sentences below.</p>
+					<p class="text-center text-warning"><strong>Write complete sentences below.</strong></p>
 					<form id="PFSHform">
-						<section>
+						<section class="clearfix">
 							<div class="form-group col-sm-12">
 								<label for="PFSHmedical" class="col-sm-4 control-label">Pertinent medical info from intake questionnaire, and/or pt's current list of medications and allergies.</label>
 								<div class="col-sm-8">
@@ -128,7 +133,7 @@ $return = true;
 							</div>
 						</section>
 						
-						<section>
+						<section class="clearfix">
 							<div class="form-group col-sm-10 col-sm-offset-1">
 								<label for="PFSHfamily" class="col-sm-4 control-label">Pertinent family history from intake questionnaire.</label>
 								<div class="col-sm-8">
@@ -181,7 +186,7 @@ $return = true;
 							</div>
 						</section>
 						
-						<section>
+						<section class="clearfix">
 							<div class="form-group col-sm-10 col-sm-offset-1">
 								<h4 class="text-center">Check boxes for "yes"</h4>
 								<label for="PFSHsocial" class="col-sm-4 control-label">Pertinent social issues affecting health.</label>
@@ -246,9 +251,260 @@ $return = true;
 			<div class="row" id="ROS">
                 <div class="col-sm-12">
 					<h2 class="text-center">ROS - Review of Systems</h2>
-					<p class="text-center">Check all that are applicable.<br>Note: you can copy the intake questionnaire<br>Blank = negative for that symptom.</p>
+					<p class="text-center text-warning"><strong>Check all that are applicable.<br>Note: you can copy the intake questionnaire<br>Unchecked = negative for that symptom.</strong></p>
 					<form id="ROSform">
-					
+						<section class="clearfix">
+							<div class="col-sm-2">
+								<h4 class="text-right">Psychiatric</h4>
+							</div>
+							<div class="form-group col-sm-4">
+								<div class="checkbox">
+									<label for="ROShallucinate">
+										<input type="checkbox" value="" id="ROShallucinate">Hallucinations
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="ROSsi">
+										<input type="checkbox" value="" id="ROSsi">SI
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="ROSanxiety">
+										<input type="checkbox" value="" id="ROSanxiety">Anxiety
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="ROSinsomnia">
+										<input type="checkbox" value="" id="ROSinsomnia">Insomnia
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="ROSdaabuse">
+										<input type="checkbox" value="" id="ROSdaabuse">Drug/Alcohol Abuse
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="ROSpsychother1">
+										<input type="checkbox" value="" id="ROSpsychother1">Other (type over this text in your own words)
+									</label>
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<h4 class="text-right">Constitutional</h4>
+							</div>
+							<div class="form-group col-sm-4">
+								<div class="checkbox">
+									<label for="ROSfatigue">
+										<input type="checkbox" value="" id="ROSfatigue">Fatigue
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="ROSeating">
+										<input type="checkbox" value="" id="ROSeating">Eating Disorder
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="ROSweight">
+										<input type="checkbox" value="" id="ROSweight">Weight Loss
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="ROSfever">
+										<input type="checkbox" value="" id="ROSfever">Fever
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="ROSchills">
+										<input type="checkbox" value="" id="ROSchills">Chills
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="ROSns">
+										<input type="checkbox" value="" id="ROSns">Night Sweats
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="ROSconother1">
+										<input type="checkbox" value="" id="ROSconother1">Other (type over this text in your own words)
+									</label>
+								</div>
+							</div>
+						</section>
+						
+						<section class="clearfix">
+							<div class="col-sm-2">
+								<h4 class="text-right">Cardiovascular</h4>
+							</div>
+							<div class="form-group col-sm-4">
+								<div class="checkbox">
+									<label for="ROSchest">
+										<input type="checkbox" value="" id="ROSchest">Chest pain
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="ROSpalp">
+										<input type="checkbox" value="" id="ROSpalp">Palptiations
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="ROScvother1">
+										<input type="checkbox" value="" id="ROScvother1">Other (type over this text in your own words)
+									</label>
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<h4 class="text-right">Musculoskeletal</h4>
+							</div>
+							<div class="form-group col-sm-4">
+								<div class="checkbox">
+									<label for="ROSmuscle">
+										<input type="checkbox" value="" id="ROSmuscle">Muscle Weakness
+									</label>
+									<label for="ROSjoint">
+										<input type="checkbox" value="" id="ROSjoint">Joint Swelling
+									</label>
+									<label for="ROSnsaid">
+										<input type="checkbox" value="" id="ROSnsaid">NSAID use
+									</label>
+									<label for="ROSskelother1">
+										<input type="checkbox" value="" id="ROSskelother1">Other (type over this text in your own words)
+									</label>
+								</div>
+							</div>
+						</section>
+						
+						<section class="clearfix">
+							<div class="col-sm-2">
+								<h4 class="text-right">Gastrointestinal</h4>
+							</div>
+							<div class="form-group col-sm-4">
+								<div class="checkbox">
+									<label for="ROSnausea">
+										<input type="checkbox" value="" id="ROSnausea">Nausea
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="ROSvomit">
+										<input type="checkbox" value="" id="ROSvomit">Vomiting
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="ROSdiarrhea">
+										<input type="checkbox" value="" id="ROSdiarrhea">Diarrhea
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="ROSconstipation">
+										<input type="checkbox" value="" id="ROSconstipation">Constipation
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="ROSgasother1">
+										<input type="checkbox" value="" id="ROSgasother1">Other (type over this text in your own words)
+									</label>
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<h4 class="text-right">Neurological</h4>
+							</div>
+							<div class="form-group col-sm-4">
+								<div class="checkbox">
+									<label for="ROSmigraines">
+										<input type="checkbox" value="" id="ROSmigraines">Migraines
+									</label>
+									<label for="ROSnumbness">
+										<input type="checkbox" value="" id="ROSnumbness">Numbness
+									</label>
+									<label for="ROSvertigo">
+										<input type="checkbox" value="" id="ROSvertigo">Vertigo
+									</label>
+									<label for="ROStremors">
+										<input type="checkbox" value="" id="ROStremors">Tremors
+									</label>
+									<label for="ROSneuroother1">
+										<input type="checkbox" value="" id="ROSneuroother1">Other (type over this text in your own words)
+									</label>
+								</div>
+							</div>
+						</section>
+						
+						<section class="clearfix ROSsingles">
+							<div class="row">
+								<div class="col-sm-2 text-right">
+									<label for="ROSeyes">Eyes</label>
+								</div>
+								<div class="form-group col-sm-4 clearfix">
+									<div class="checkbox">
+										<input type="checkbox" value="" id="ROSeyes">
+									</div>
+								</div>
+								<div class="col-sm-2 text-right">
+									<label for="ROSent">Ear/Nose/Throat</label>
+								</div>
+								<div class="form-group col-sm-4">
+									<div class="checkbox">
+										<input type="checkbox" value="" id="ROSent">
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="col-sm-2 text-right">
+									<label for="ROSresp">Respiratory</label>
+								</div>
+								<div class="form-group col-sm-4">
+									<div class="checkbox">
+										<input type="checkbox" value="" id="ROSresp">
+									</div>
+								</div>
+								<div class="col-sm-2 text-right">
+									<label for="ROSgu">Genitourinary</label>
+								</div>
+								<div class="form-group col-sm-4">
+									<div class="checkbox">
+										<input type="checkbox" value="" id="ROSgu">
+									</div>
+								</div>
+							</div>
+						
+							<div class="row">
+								<div class="col-sm-2 text-right">
+									<label for="ROSskin">Skin</label>
+								</div>
+								<div class="form-group col-sm-4">
+									<div class="checkbox">
+										<input type="checkbox" value="" id="ROSskin">
+									</div>
+								</div>
+								<div class="col-sm-2 text-right">
+									<label for="ROSendo">Endocrine</label>
+								</div>
+								<div class="form-group col-sm-4">
+									<div class="checkbox">
+										<input type="checkbox" value="" id="ROSendo">
+									</div>
+								</div>
+							</div>
+						
+							<div class="row">
+								<div class="col-sm-2 text-right">
+									<label for="ROShl">Hem/Lymphatic</label>
+								</div>
+								<div class="form-group col-sm-4">
+									<div class="checkbox">
+										<input type="checkbox" value="" id="ROShl">
+									</div>
+								</div>
+								<div class="col-sm-2 text-right">
+									<label for="ROSai">Allergic/Immun</label>
+								</div>
+								<div class="form-group col-sm-4">
+									<div class="checkbox">
+										<input type="checkbox" value="" id="ROSai">
+									</div>
+								</div>
+							</div>
+						</section>
 					</form>
 				</div>
 			</div>
@@ -258,9 +514,299 @@ $return = true;
     <section id="exam" class="exam-section">
         <div class="container">
             <div class="row">
-                <div class="col-sm-10 col-sm-offset-1">
+                <div class="col-sm-12">
                     <h1 class="text-center">Physical Exam</h1>
-                </div>
+					<form id="PEform">
+						<section class="clearfix">
+							<div class="form-group col-sm-7">
+								<div class="col-sm-3 text-right">
+									<h4>Vital Signs</h4>
+								</div>
+								<div class="col-sm-9">
+									<label for="PEbp" class="col-sm-8 control-label">Sitting or Standing Blood Pressure</label>
+									<div class="col-sm-4">
+										<input type="text" class="form-control" id="PEbp">
+									</div>
+									<label for="PEpr" class="col-sm-8 control-label">Pulse Rate and Regularity</label>
+									<div class="col-sm-4">
+										<input type="text" class="form-control" id="PEpr">
+									</div>
+									<label for="PEresp" class="col-sm-8 control-label">Respiration</label>
+									<div class="col-sm-4">
+										<input type="text" class="form-control" id="PEresp">
+									</div>
+									<label for="PEtemp" class="col-sm-8 control-label">Temperature</label>
+									<div class="col-sm-4">
+										<input type="text" class="form-control" id="PEtemp">
+									</div>
+									<label for="PEheight" class="col-sm-8 control-label">Height</label>
+									<div class="col-sm-4">
+										<input type="text" class="form-control" id="PEheight">
+									</div>
+									<label for="PEweight" class="col-sm-8 control-label">Weight</label>
+									<div class="col-sm-4">
+										<input type="text" class="form-control" id="PEweight">
+									</div>
+								</div>
+							</div>
+							<div class="form-group col-sm-5">
+								<div class="col-sm-6 text-right">
+									<h4>Body Habitus</h4>
+									<p class="text-warning"><strong>Check one (and only one) of the following</strong></p>
+								</div>
+								<div class="col-sm-6">
+									<div class="checkbox">
+										<label for="PEbhendo">
+											<input type="checkbox" value="" id="PEbhendo">Endomorphic
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="PEbhecto">
+											<input type="checkbox" value="" id="PEbhecto">Ectomorphic
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="PEbhmeso">
+											<input type="checkbox" value="" id="PEbhmeso">Mesomorphic
+										</label>
+									</div>
+								</div>
+							</div>
+						</section>
+						
+						<section class="clearfix">
+							<div class="col-sm-4">
+								<div class="row">
+									<div class="col-sm-7 text-right">
+										<h4>Speech is normal for:</h4>
+										<p>(check all that apply)</p>
+									</div>
+									<div class="form-group col-sm-5">
+										<div class="checkbox">
+											<label for="PEvocab">
+												<input type="checkbox" value="" id="PEvocab">Vocabulary
+											</label>
+										</div>
+										<div class="checkbox">
+											<label for="PEvolume">
+												<input type="checkbox" value="" id="PEvolume">Volume
+											</label>
+										</div>
+										<div class="checkbox">
+											<label for="PEpace">
+												<input type="checkbox" value="" id="PEpace">Pace
+											</label>
+										</div>
+										<div class="checkbox">
+											<label for="PEdetails">
+												<input type="checkbox" value="" id="PEdetails">Details
+											</label>
+										</div>
+										<div class="checkbox">
+											<label for="PErt">
+												<input type="checkbox" value="" id="PErt">Reaction Time
+											</label>
+										</div>
+										<div class="checkbox">
+											<label for="PEpitch">
+												<input type="checkbox" value="" id="PEpitch">Pitch
+											</label>
+										</div>
+										<div class="checkbox">
+											<label for="PEart">
+												<input type="checkbox" value="" id="PEart">Articulation
+											</label>
+										</div>
+										<div class="checkbox">
+											<label for="PEspont">
+												<input type="checkbox" value="" id="PEspont">Spontaneity
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<label for="PEabspeech" class="h4">Describe any abnormal speech patterns below:</label>
+									<textarea id="PEabspeech" class="form-control" rows="3"></textarea>
+								</div>
+							</div>
+							
+							<div class="col-sm-4">
+								<div class="col-sm-7 text-right">
+									<h4>Thought Content:</h4>
+									<p>(check all that apply)</p>
+								</div>
+								<div class="form-group col-sm-5">
+									<div class="checkbox">
+										<label for="PElgd">
+											<input type="checkbox" value="" id="PElgd">Linear and<br>goal-directed
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="PEcirc">
+											<input type="checkbox" value="" id="PEcirc">Circumstantial
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="PEtang">
+											<input type="checkbox" value="" id="PEtang">Tangential
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="PEinc">
+											<input type="checkbox" value="" id="PEinc">Incoherent
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="PEevasive">
+											<input type="checkbox" value="" id="PEevasive">Evasive
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="PEracing">
+											<input type="checkbox" value="" id="PEracing">Racing
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="PEblocking">
+											<input type="checkbox" value="" id="PEblocking">Blocking
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="PEpers">
+											<input type="checkbox" value="" id="PEpers">Perseveration
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="PEneo">
+											<input type="checkbox" value="" id="PEneo">Neologisms
+										</label>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-sm-4">
+								<div class="row">
+									<div class="col-sm-7 text-right">
+										<label for="PEassoc" class="h4">Associations intact:</label>
+									</div>
+									<div class="form-group col-sm-5">
+										<input type="checkbox" value="" id="PEassoc">
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-sm-7 text-right">
+										<h4>Risk factors/<br>psychotic thoughts:</h4>
+										<p>(check all that apply)</p>
+									</div>
+									<div class="form-group col-sm-5">
+										<div class="checkbox">
+											<label for="PEsihi">
+												<input type="checkbox" value="" id="PEsihi">SI/HI
+											</label>
+										</div>
+										<div class="checkbox">
+											<label for="PEhall">
+												<input type="checkbox" value="" id="PEhall">Hallucinations
+											</label>
+										</div>
+										<div class="checkbox">
+											<label for="PEdel">
+												<input type="checkbox" value="" id="PEdel">Delusions
+											</label>
+										</div>
+										<div class="checkbox">
+											<label for="PEobs">
+												<input type="checkbox" value="" id="PEobs">obsessions
+											</label>
+										</div>
+										<div class="checkbox">
+											<label for="PErum">
+												<input type="checkbox" value="" id="PErum">Aggressive/Violent<br>Ruminations
+											</label>
+										</div>
+									</div>
+								</div>
+						</section>
+						
+						<section class="clearfix PEsingles col-sm-9 col-sm-offset-1">
+							<div class="row">
+								<div class="col-sm-5 text-right">
+									<label for="PEji">Judgment and insight intact</label>
+								</div>
+								<div class="form-group col-sm-1 clearfix">
+									<div class="checkbox">
+										<input type="checkbox" value="" id="PEji">
+									</div>
+								</div>
+								<div class="col-sm-5 text-right">
+									<label for="PEAOx3">Alert &amp; Oriented x3</label>
+								</div>
+								<div class="form-group col-sm-1">
+									<div class="checkbox">
+										<input type="checkbox" value="" id="PEAOx3">
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="col-sm-5 text-right">
+									<label for="PEmemory">Recent and remote memory intact</label>
+								</div>
+								<div class="form-group col-sm-1 clearfix">
+									<div class="checkbox">
+										<input type="checkbox" value="" id="PEmemory">
+									</div>
+								</div>
+								<div class="col-sm-5 text-right">
+									<label for="PEattention">Normal attention span and concentration</label>
+								</div>
+								<div class="form-group col-sm-1">
+									<div class="checkbox">
+										<input type="checkbox" value="" id="PEattention">
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="col-sm-5 text-right">
+									<label for="PElanguage">Language (naming objects, repeating phrases)</label>
+								</div>
+								<div class="form-group col-sm-1 clearfix">
+									<div class="checkbox">
+										<input type="checkbox" value="" id="PElanguage">
+									</div>
+								</div>
+								<div class="col-sm-5 text-right">
+									<label for="PEknowledge">Fund of knowledge</label>
+								</div>
+								<div class="form-group col-sm-1">
+									<div class="checkbox">
+										<input type="checkbox" value="" id="PEknowledge">
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="col-sm-5 text-right">
+									<label for="PEgait">Gait and station</label>
+								</div>
+								<div class="form-group col-sm-1 clearfix">
+									<div class="checkbox">
+										<input type="checkbox" value="" id="PEgait">
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<label for="PEmood" class="col-sm-3 control-label text-right h4">Mood is:</label>
+								<div class="col-sm-9">
+									<input type="text" value="" id="PEmood" class="form-control">
+								</div>
+							</div>
+						</section>
+					</form>
+				</div>
             </div>
         </div>
     </section>
@@ -268,8 +814,51 @@ $return = true;
     <section id="mdm" class="mdm-section">
         <div class="container">
             <div class="row">
-                <div class="col-sm-10 col-sm-offset-1">
+                <div class="col-sm-12">
                     <h1 class="text-center">Medical Decision Making</h1>
+					<h2 class="text-center">Problem</h2>
+					<h4 class="text-center">Diagnosis or Probable Diagnosis</h4>
+					<p class="text-center text-warning"><strong>The word "new" means new to the physician, not new to the patient</strong></p>
+					<form id="MDMform">
+						<section class="clearfix col-sm-12 minorproblems">
+							<label for="MDMminprob1" class="control-label col-sm-4 text-right">Self-limited or minor problem #1</label>
+							<div class="form-group col-sm-8">
+								<input type="text" value="" id="MDMminprob1" class="form-control">
+							</div>
+							<label for="MDMminprob2" class="control-label col-sm-4 text-right">Self-limited or minor problem #2</label>
+							<div class="form-group col-sm-8">
+								<input type="text" value="" id="MDMminprob2" class="form-control">
+							</div>
+						</section>
+						
+						<section class="clearfix col-sm-12 stableproblems">
+							<label for="MDMstabprob1" class="control-label col-sm-4 text-right">Established problem, stable or improving #1</label>
+							<div class="form-group col-sm-8">
+								<input type="text" value="" id="MDMstabprob1" class="form-control">
+							</div>
+						</section>
+						
+						<section class="clearfix col-sm-12 worseproblems">
+							<label for="MDMworseprob1" class="control-label col-sm-4 text-right">Established problem, worsening #1</label>
+							<div class="form-group col-sm-8">
+								<input type="text" value="" id="MDMworseprob1" class="form-control">
+							</div>
+						</section>
+						
+						<section class="clearfix col-sm-12 newproblemsnowork">
+							<label for="MDMnewprobno" class="control-label col-sm-4 text-right">New problem, no additional workup planned</label>
+							<div class="form-group col-sm-8">
+								<input type="text" value="" id="MDMnewprobno" class="form-control">
+							</div>
+						</section>
+						
+						<section class="clearfix col-sm-12 newproblemsyeswork">
+							<label for="MDMnewprobyes1" class="control-label col-sm-4 text-right">New problem, additional workup planned #1</label>
+							<div class="form-group col-sm-8">
+								<input type="text" value="" id="MDMnewprobyes1" class="form-control">
+							</div>
+						</section>
+					</form>
                 </div>
             </div>
         </div>
