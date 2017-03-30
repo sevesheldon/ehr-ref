@@ -25,10 +25,7 @@ $return = true;
 
     <title>E/M Encounter</title>
 
-    <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
     <link href="css/ehr.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -66,82 +63,141 @@ $return = true;
             <div class="row">
                 <div class="col-sm-12">
                     <h1 class="text-center">Medical Decision Making</h1>
-					<h2 class="text-center">Problem</h2>
+					<h2 class="text-center">Problem(s)</h2>
 					<h4 class="text-center">Diagnosis or Probable Diagnosis</h4>
 					<p class="text-center text-warning"><strong>The word "new" means new to the physician, not new to the patient</strong></p>
 					<form id="MDMform">
-						<section class="clearfix col-sm-12 minorproblems">
-							<div class="row">
-								<label for="MDMminprob[]" class="control-label col-sm-4 text-right">Self-limited or minor problem #1</label>
-								<div class="form-group col-sm-7">
-									<input type="text" value="" class="form-control MDMminprob" name="MDMminprob[]">
+						<section id="MDMproblems">
+							<section class="clearfix col-sm-12 minorproblems">
+								<div class="row">
+									<label for="MDMminprob[]" class="control-label col-sm-4 text-right">Self-limited or minor problem #1</label>
+									<div class="form-group col-sm-7">
+										<input type="text" value="" class="form-control MDMminprob" name="MDMminprob[]">
+									</div>
+								</div>
+								<div class="row">
+									<label for="MDMminprob[]" class="control-label col-sm-4 text-right">Self-limited or minor problem #2</label>
+									<div class="form-group col-sm-7">
+										<input type="text" value="" class="form-control MDMminprob" name="MDMminprob[]">
+									</div>
+								</div>
+							</section>
+							
+							<section class="clearfix col-sm-12 stableproblems">
+								<div class="row">
+									<label for="MDMstabprob[]" class="control-label col-sm-4 text-right">Established problem, stable or improving #1</label>
+									<div class="form-group col-sm-7">
+										<input type="text" value="" class="form-control MDMstabprob" name="MDMstabprob[]">
+									</div>
+									<div clas="col-sm-1">
+										<button type="button" class="add-row btn btn-default alert-success" aria-label="Left Align">
+											<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+										</button>
+										<button type="button" class="remove-row btn btn-default alert-danger" aria-label="Left Align">
+											<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+										</button>
+									</div>
+								</div>
+							</section>
+							
+							<section class="clearfix col-sm-12 worseproblems">
+								<div class="row">
+									<label for="MDMworseprob[]" class="control-label col-sm-4 text-right">Established problem, worsening #1</label>
+									<div class="form-group col-sm-7">
+										<input type="text" value="" class="form-control MDMworseprob" name="MDMworseprob[]">
+									</div>
+									<div clas="col-sm-1">
+										<button type="button" class="add-row btn btn-default alert-success" aria-label="Left Align">
+											<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+										</button>
+										<button type="button" class="remove-row btn btn-default alert-danger" aria-label="Left Align">
+											<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+										</button>
+									</div>
+								</div>
+							</section>
+							
+							<section class="clearfix col-sm-12 newproblemsnowork">
+								<div class="row">
+									<label for="MDMnewprobno" class="control-label col-sm-4 text-right">New problem, no additional workup planned</label>
+									<div class="form-group col-sm-7">
+										<input type="text" value="" class="form-control MDMnewprobno" name="MDMnewprobno">
+									</div>
+								</div>
+							</section>
+							
+							<section class="clearfix col-sm-12 newproblemsyeswork">
+								<div class="row">
+									<label for="MDMnewprobyes[]" class="control-label col-sm-4 text-right">New problem, additional workup planned #1</label>
+									<div class="form-group col-sm-7">
+										<input type="text" value="" class="form-control MDMnewprobyes" name="MDMnewprobyes[]">
+									</div>
+									<div clas="col-sm-1">
+										<button type="button" class="add-row btn btn-default alert-success" aria-label="Left Align">
+											<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+										</button>
+										<button type="button" class="remove-row btn btn-default alert-danger" aria-label="Left Align">
+											<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+										</button>
+									</div>
+								</div>
+							</section>
+						</section>
+						
+						<section id="MDMdata" class="clearfix">
+							<h2 class="text-center">Data</h2>
+							<div class="form-group col-sm-4 col-sm-offset-2">
+								<div class="checkbox">
+									<label for="MDMdatalab">
+										<input type="checkbox" value="" id="MDMdatalab">Review or order clinical lab tests
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="MDMdataradio">
+										<input type="checkbox" value="" id="MDMdataradio">Review or order radiology tests
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="MDMdatamedicine">
+										<input type="checkbox" value="" id="MDMdatamedicine">Review or order medicine test (e.g. EKG)
+									</label>
 								</div>
 							</div>
-							<div class="row">
-								<label for="MDMminprob[]" class="control-label col-sm-4 text-right">Self-limited or minor problem #2</label>
-								<div class="form-group col-sm-7">
-									<input type="text" value="" class="form-control MDMminprob" name="MDMminprob[]">
+							<div class="form-group col-sm-4">
+								<div class="checkbox">
+									<label for="MDMdatadiscuss">
+										<input type="checkbox" value="" id="MDMdatadiscuss">Discuss test with performing physician
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="MDMdatarecdec">
+										<input type="checkbox" value="" id="MDMdatarecdec">Decision to obtain old records
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="MDMdatarecrev">
+										<input type="checkbox" value="" id="MDMdatarecrev">Review <u>and summation</u> of old records
+									</label>
 								</div>
 							</div>
 						</section>
 						
-						<section class="clearfix col-sm-12 stableproblems">
-							<div class="row">
-								<label for="MDMstabprob[]" class="control-label col-sm-4 text-right">Established problem, stable or improving #1</label>
-								<div class="form-group col-sm-7">
-									<input type="text" value="" class="form-control MDMstabprob" name="MDMstabprob[]">
-								</div>
-								<div clas="col-sm-1">
-									<button type="button" class="add-row btn btn-default alert-success" aria-label="Left Align">
-										<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-									</button>
-									<button type="button" class="remove-row btn btn-default alert-danger" aria-label="Left Align">
-										<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-									</button>
-								</div>
-							</div>
-						</section>
-						
-						<section class="clearfix col-sm-12 worseproblems">
-							<div class="row">
-								<label for="MDMworseprob[]" class="control-label col-sm-4 text-right">Established problem, worsening #1</label>
-								<div class="form-group col-sm-7">
-									<input type="text" value="" class="form-control MDMworseprob" name="MDMworseprob[]">
-								</div>
-								<div clas="col-sm-1">
-									<button type="button" class="add-row btn btn-default alert-success" aria-label="Left Align">
-										<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-									</button>
-									<button type="button" class="remove-row btn btn-default alert-danger" aria-label="Left Align">
-										<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-									</button>
-								</div>
-							</div>
-						</section>
-						
-						<section class="clearfix col-sm-12 newproblemsnowork">
-							<div class="row">
-								<label for="MDMnewprobno" class="control-label col-sm-4 text-right">New problem, no additional workup planned</label>
-								<div class="form-group col-sm-7">
-									<input type="text" value="" class="form-control MDMnewprobno" name="MDMnewprobno">
-								</div>
-							</div>
-						</section>
-						
-						<section class="clearfix col-sm-12 newproblemsyeswork">
-							<div class="row">
-								<label for="MDMnewprobyes[]" class="control-label col-sm-4 text-right">New problem, additional workup planned #1</label>
-								<div class="form-group col-sm-7">
-									<input type="text" value="" class="form-control MDMnewprobyes" name="MDMnewprobyes[]">
-								</div>
-								<div clas="col-sm-1">
-									<button type="button" class="add-row btn btn-default alert-success" aria-label="Left Align">
-										<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-									</button>
-									<button type="button" class="remove-row btn btn-default alert-danger" aria-label="Left Align">
-										<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-									</button>
-								</div>
+						<section id="MDMrisk" class="text-center">
+							<h2 class="text-center">Risk to Patient</h2>
+							<p class="text-danger">Choose one from the list below. If more than one applies, choose the one that is higher in the list.</p>
+							<div class="col-sm-4 col-sm-offset-4">
+								<select id="MDMriskmenu" class="form-control">
+									<option value="mod">Stopping, starting, or changing Rx (other than LiCo)</option>
+									<option value="high">Drug therapy requiring intensive monitoring for toxicity</option>
+									<option value="low">Having only 1 well-controlled chronic illness</option>
+									<option value="mod">Having 1+ worsening chronic illness</option>
+									<option value="mod">Having 2+ well-controlled chronic illnesses</option>
+									<option value="mod">A new problem with uncertain diagnosis</option>
+									<option value="high">Severe exacerbation of chronic illness</option>
+									<option value="high">Acute symptoms with potential threat to self or others</option>
+									<option value="high">An abrupt change in neurologic status</option>
+									<option value="min">Having only one minor (self-limiting) problem</option>
+								</select>
 							</div>
 						</section>
 					</form>
