@@ -71,41 +71,77 @@ $return = true;
 					<p class="text-center text-warning"><strong>The word "new" means new to the physician, not new to the patient</strong></p>
 					<form id="MDMform">
 						<section class="clearfix col-sm-12 minorproblems">
-							<label for="MDMminprob1" class="control-label col-sm-4 text-right">Self-limited or minor problem #1</label>
-							<div class="form-group col-sm-8">
-								<input type="text" value="" id="MDMminprob1" class="form-control">
+							<div class="row">
+								<label for="MDMminprob[]" class="control-label col-sm-4 text-right">Self-limited or minor problem #1</label>
+								<div class="form-group col-sm-7">
+									<input type="text" value="" class="form-control MDMminprob" name="MDMminprob[]">
+								</div>
 							</div>
-							<label for="MDMminprob2" class="control-label col-sm-4 text-right">Self-limited or minor problem #2</label>
-							<div class="form-group col-sm-8">
-								<input type="text" value="" id="MDMminprob2" class="form-control">
+							<div class="row">
+								<label for="MDMminprob[]" class="control-label col-sm-4 text-right">Self-limited or minor problem #2</label>
+								<div class="form-group col-sm-7">
+									<input type="text" value="" class="form-control MDMminprob" name="MDMminprob[]">
+								</div>
 							</div>
 						</section>
 						
 						<section class="clearfix col-sm-12 stableproblems">
-							<label for="MDMstabprob1" class="control-label col-sm-4 text-right">Established problem, stable or improving #1</label>
-							<div class="form-group col-sm-8">
-								<input type="text" value="" id="MDMstabprob1" class="form-control">
+							<div class="row">
+								<label for="MDMstabprob[]" class="control-label col-sm-4 text-right">Established problem, stable or improving #1</label>
+								<div class="form-group col-sm-7">
+									<input type="text" value="" class="form-control MDMstabprob" name="MDMstabprob[]">
+								</div>
+								<div clas="col-sm-1">
+									<button type="button" class="add-row btn btn-default alert-success" aria-label="Left Align">
+										<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+									</button>
+									<button type="button" class="remove-row btn btn-default alert-danger" aria-label="Left Align">
+										<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+									</button>
+								</div>
 							</div>
 						</section>
 						
 						<section class="clearfix col-sm-12 worseproblems">
-							<label for="MDMworseprob1" class="control-label col-sm-4 text-right">Established problem, worsening #1</label>
-							<div class="form-group col-sm-8">
-								<input type="text" value="" id="MDMworseprob1" class="form-control">
+							<div class="row">
+								<label for="MDMworseprob[]" class="control-label col-sm-4 text-right">Established problem, worsening #1</label>
+								<div class="form-group col-sm-7">
+									<input type="text" value="" class="form-control MDMworseprob" name="MDMworseprob[]">
+								</div>
+								<div clas="col-sm-1">
+									<button type="button" class="add-row btn btn-default alert-success" aria-label="Left Align">
+										<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+									</button>
+									<button type="button" class="remove-row btn btn-default alert-danger" aria-label="Left Align">
+										<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+									</button>
+								</div>
 							</div>
 						</section>
 						
 						<section class="clearfix col-sm-12 newproblemsnowork">
-							<label for="MDMnewprobno" class="control-label col-sm-4 text-right">New problem, no additional workup planned</label>
-							<div class="form-group col-sm-8">
-								<input type="text" value="" id="MDMnewprobno" class="form-control">
+							<div class="row">
+								<label for="MDMnewprobno" class="control-label col-sm-4 text-right">New problem, no additional workup planned</label>
+								<div class="form-group col-sm-7">
+									<input type="text" value="" class="form-control MDMnewprobno" name="MDMnewprobno">
+								</div>
 							</div>
 						</section>
 						
 						<section class="clearfix col-sm-12 newproblemsyeswork">
-							<label for="MDMnewprobyes1" class="control-label col-sm-4 text-right">New problem, additional workup planned #1</label>
-							<div class="form-group col-sm-8">
-								<input type="text" value="" id="MDMnewprobyes1" class="form-control">
+							<div class="row">
+								<label for="MDMnewprobyes[]" class="control-label col-sm-4 text-right">New problem, additional workup planned #1</label>
+								<div class="form-group col-sm-7">
+									<input type="text" value="" class="form-control MDMnewprobyes" name="MDMnewprobyes[]">
+								</div>
+								<div clas="col-sm-1">
+									<button type="button" class="add-row btn btn-default alert-success" aria-label="Left Align">
+										<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+									</button>
+									<button type="button" class="remove-row btn btn-default alert-danger" aria-label="Left Align">
+										<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+									</button>
+								</div>
 							</div>
 						</section>
 					</form>
@@ -864,15 +900,11 @@ $return = true;
         </div>
     </section>
 
-    <!-- jQuery -->
     <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
-    <!-- Scrolling Nav JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
+    <script src="js/util.js"></script>
 
 </body>
 
