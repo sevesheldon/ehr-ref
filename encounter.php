@@ -60,6 +60,59 @@ $return = true;
             </div>
         </div>
     </section>
+	
+	<section id="mdm" class="mdm-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="text-center">Medical Decision Making</h1>
+					<h2 class="text-center">Problem</h2>
+					<h4 class="text-center">Diagnosis or Probable Diagnosis</h4>
+					<p class="text-center text-warning"><strong>The word "new" means new to the physician, not new to the patient</strong></p>
+					<form id="MDMform">
+						<section class="clearfix col-sm-12 minorproblems">
+							<label for="MDMminprob1" class="control-label col-sm-4 text-right">Self-limited or minor problem #1</label>
+							<div class="form-group col-sm-8">
+								<input type="text" value="" id="MDMminprob1" class="form-control">
+							</div>
+							<label for="MDMminprob2" class="control-label col-sm-4 text-right">Self-limited or minor problem #2</label>
+							<div class="form-group col-sm-8">
+								<input type="text" value="" id="MDMminprob2" class="form-control">
+							</div>
+						</section>
+						
+						<section class="clearfix col-sm-12 stableproblems">
+							<label for="MDMstabprob1" class="control-label col-sm-4 text-right">Established problem, stable or improving #1</label>
+							<div class="form-group col-sm-8">
+								<input type="text" value="" id="MDMstabprob1" class="form-control">
+							</div>
+						</section>
+						
+						<section class="clearfix col-sm-12 worseproblems">
+							<label for="MDMworseprob1" class="control-label col-sm-4 text-right">Established problem, worsening #1</label>
+							<div class="form-group col-sm-8">
+								<input type="text" value="" id="MDMworseprob1" class="form-control">
+							</div>
+						</section>
+						
+						<section class="clearfix col-sm-12 newproblemsnowork">
+							<label for="MDMnewprobno" class="control-label col-sm-4 text-right">New problem, no additional workup planned</label>
+							<div class="form-group col-sm-8">
+								<input type="text" value="" id="MDMnewprobno" class="form-control">
+							</div>
+						</section>
+						
+						<section class="clearfix col-sm-12 newproblemsyeswork">
+							<label for="MDMnewprobyes1" class="control-label col-sm-4 text-right">New problem, additional workup planned #1</label>
+							<div class="form-group col-sm-8">
+								<input type="text" value="" id="MDMnewprobyes1" class="form-control">
+							</div>
+						</section>
+					</form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="history" class="history-section">
         <div class="container">
@@ -807,59 +860,6 @@ $return = true;
 						</section>
 					</form>
 				</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="mdm" class="mdm-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h1 class="text-center">Medical Decision Making</h1>
-					<h2 class="text-center">Problem</h2>
-					<h4 class="text-center">Diagnosis or Probable Diagnosis</h4>
-					<p class="text-center text-warning"><strong>The word "new" means new to the physician, not new to the patient</strong></p>
-					<form id="MDMform">
-						<section class="clearfix col-sm-12 minorproblems">
-							<label for="MDMminprob1" class="control-label col-sm-4 text-right">Self-limited or minor problem #1</label>
-							<div class="form-group col-sm-8">
-								<input type="text" value="" id="MDMminprob1" class="form-control">
-							</div>
-							<label for="MDMminprob2" class="control-label col-sm-4 text-right">Self-limited or minor problem #2</label>
-							<div class="form-group col-sm-8">
-								<input type="text" value="" id="MDMminprob2" class="form-control">
-							</div>
-						</section>
-						
-						<section class="clearfix col-sm-12 stableproblems">
-							<label for="MDMstabprob1" class="control-label col-sm-4 text-right">Established problem, stable or improving #1</label>
-							<div class="form-group col-sm-8">
-								<input type="text" value="" id="MDMstabprob1" class="form-control">
-							</div>
-						</section>
-						
-						<section class="clearfix col-sm-12 worseproblems">
-							<label for="MDMworseprob1" class="control-label col-sm-4 text-right">Established problem, worsening #1</label>
-							<div class="form-group col-sm-8">
-								<input type="text" value="" id="MDMworseprob1" class="form-control">
-							</div>
-						</section>
-						
-						<section class="clearfix col-sm-12 newproblemsnowork">
-							<label for="MDMnewprobno" class="control-label col-sm-4 text-right">New problem, no additional workup planned</label>
-							<div class="form-group col-sm-8">
-								<input type="text" value="" id="MDMnewprobno" class="form-control">
-							</div>
-						</section>
-						
-						<section class="clearfix col-sm-12 newproblemsyeswork">
-							<label for="MDMnewprobyes1" class="control-label col-sm-4 text-right">New problem, additional workup planned #1</label>
-							<div class="form-group col-sm-8">
-								<input type="text" value="" id="MDMnewprobyes1" class="form-control">
-							</div>
-						</section>
-					</form>
-                </div>
             </div>
         </div>
     </section>

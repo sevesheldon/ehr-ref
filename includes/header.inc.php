@@ -22,13 +22,13 @@
                         <a class="page-scroll" href="#cc">Chief Complaint</a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="#mdm">Medical Decision Making</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="#history">History</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#exam">Physical Exam</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#mdm">Medical Decision Making</a>
                     </li>
                     <li>
                         <a href="logout.php">Logout</a>
