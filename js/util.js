@@ -16,6 +16,7 @@ $(document).ready(function(){
 			$(this).removeAttr("value");
 		});
 		$("label", $newRow).html($("label", $newRow).html().replace(/#\d*/, "#" + $("div.row", $parentSection).length));
+		$("input", $newRow).focus();
 	});
 	
 	// Remove the input row from the form corresponding to the button pressed
@@ -44,6 +45,7 @@ $(document).ready(function(){
 		if ($(this).val()) {
 			if (!$("input + input", $parent).length) {
 				$parent.append("<input type=\"text\" value=\"\" class=\"form-control MDMnewprobwork\" name=\"MDMnewprobwork[]\" placeholder=\"Describe additional workup plan here\">");
+				$("input + input", $parent).focus();
 			}
 		} else {
 			$("input + input", $parent).remove();
@@ -142,7 +144,7 @@ function calculateMDM() {
 	$("#devinfo").empty();
 	switch($("#MDMform #MDMriskmenu").val()) { case "min": devrisk = "Minimal"; break; case "low": devrisk = "Low"; break; case "mod": devrisk = "Moderate"; break; case "high": devrisk = "High"; break; default: devrisk = "Minimal"; break; }
 	$("#devinfo").append(
-		"<h4 style=\"font-weight: bold;\">Dev Info Only</h4> \
+		"<h4 style=\"font-weight: bold;\">#####Dev Info Only#####</h4> \
 		<h4 style=\"font-weight: bold;\">MDM Calculator Results</h4> \
 		<ul class=\"list-unstyled\"> \
 		<li style=\"font-size: 18px;\">Problem Points: " + problem_result + "</li> \
