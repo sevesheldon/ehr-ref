@@ -207,6 +207,7 @@ $return = true;
 							<div class="row"></div>
 							<div class="row"><div id="MDM"></div></div>
 							<div class="row"><div id="mdm-codes"></div></div>
+							<div class="row" id="devinfo" style="margin-top: 25px;"></div>
 						</section>
 					</form>
                 </div>
