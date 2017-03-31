@@ -50,7 +50,7 @@ $return = true;
 					<div class="form-group form-group-lg">
 						<label for="chiefcomplaint" class="col-sm-4 control-label">Chief Complaint</label>
 						<div class="col-sm-8">
-							<input type="text" class="form-control" id="chiefcomplaint">
+							<input type="text" class="form-control" id="chiefcomplaint" placeholder="in the patient's own words">
 						</div>
 					</div>
                 </div>
@@ -90,10 +90,10 @@ $return = true;
 										<input type="text" value="" class="form-control MDMstabprob" name="MDMstabprob[]">
 									</div>
 									<div clas="col-sm-1">
-										<button type="button" class="add-row btn btn-default alert-success" aria-label="Left Align">
+										<button type="button" class="add-row btn btn-default alert-success">
 											<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 										</button>
-										<button type="button" class="remove-row btn btn-default alert-danger" aria-label="Left Align">
+										<button type="button" class="remove-row btn btn-default alert-danger">
 											<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
 										</button>
 									</div>
@@ -107,10 +107,10 @@ $return = true;
 										<input type="text" value="" class="form-control MDMworseprob" name="MDMworseprob[]">
 									</div>
 									<div clas="col-sm-1">
-										<button type="button" class="add-row btn btn-default alert-success" aria-label="Left Align">
+										<button type="button" class="add-row btn btn-default alert-success">
 											<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 										</button>
-										<button type="button" class="remove-row btn btn-default alert-danger" aria-label="Left Align">
+										<button type="button" class="remove-row btn btn-default alert-danger">
 											<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
 										</button>
 									</div>
@@ -133,10 +133,10 @@ $return = true;
 										<input type="text" value="" class="form-control MDMnewprobyes" name="MDMnewprobyes[]">
 									</div>
 									<div clas="col-sm-1">
-										<button type="button" class="add-row btn btn-default alert-success" aria-label="Left Align">
+										<button type="button" class="add-row btn btn-default alert-success">
 											<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 										</button>
-										<button type="button" class="remove-row btn btn-default alert-danger" aria-label="Left Align">
+										<button type="button" class="remove-row btn btn-default alert-danger">
 											<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
 										</button>
 									</div>
@@ -146,6 +146,7 @@ $return = true;
 						
 						<section id="MDMdata" class="clearfix">
 							<h2 class="text-center">Data</h2>
+							<p class="text-danger text-center">Check box for 'Yes' as applicable</p>
 							<div class="form-group col-sm-4 col-sm-offset-2">
 								<div class="checkbox">
 									<label for="MDMdatalab">
@@ -182,8 +183,8 @@ $return = true;
 							</div>
 						</section>
 						
-						<section id="MDMrisk" class="text-center">
-							<h2 class="text-center">Risk to Patient</h2>
+						<section id="MDMrisk" class="text-center clearfix">
+							<h2>Risk to Patient</h2>
 							<p class="text-danger">Choose one from the list below. If more than one applies, choose the one that is higher in the list.</p>
 							<div class="col-sm-4 col-sm-offset-4">
 								<select id="MDMriskmenu" class="form-control">
@@ -200,6 +201,12 @@ $return = true;
 									<option value="min">Having only one minor (self-limiting) problem</option>
 								</select>
 							</div>
+						</section>
+						
+						<section id="MDMresult" class="text-center clearfix col-sm-4 col-sm-offset-4">
+							<div class="row"></div>
+							<div class="row"><div id="MDM"></div></div>
+							<div class="row"><div id="mdm-codes"></div></div>
 						</section>
 					</form>
                 </div>

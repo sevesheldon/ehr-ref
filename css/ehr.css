@@ -75,6 +75,8 @@ section {
 	width: 100%;
 }
 
+
+
 .ROSsingles .checkbox, 
 .PEsingles .checkbox, 
 #PEform .checkbox {
@@ -95,6 +97,8 @@ section {
 .PEsingles .form-group .checkbox input[type=checkbox] {
 	margin-left: 0px;
 }
+
+
 
 #PEform section div h4,
 #PEform section div .h4 {
@@ -119,4 +123,24 @@ section {
 
 .PEsingles .row:last-child {
 	margin-top: 20px;
+}
+
+#MDMresult {
+	color: #333;
+	padding-bottom: 20px;
+	border-radius: 10px;
+}
+
+#MDM h3 {
+	font-weight: 700;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+#MDM h3 + span {
+	font-weight: 0;
+}
+
+#MDMresult #mdm-codes button {
+	margin: 0 5px;
 }
