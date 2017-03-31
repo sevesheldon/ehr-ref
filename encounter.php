@@ -769,10 +769,6 @@ $return = true;
 										</div>
 									</div>
 								</div>
-								<div class="row">
-									<label for="PEabspeech" class="h4">Describe any abnormal speech patterns below:</label>
-									<textarea id="PEabspeech" class="form-control" rows="3"></textarea>
-								</div>
 							</div>
 							
 							<div class="col-sm-4">
@@ -872,6 +868,13 @@ $return = true;
 										</div>
 									</div>
 								</div>
+						</section>
+						
+						<section class="clearfix col-sm-6 col-sm-offset-3 text-center">
+							<div class="row">
+								<label for="PEabspeech" class="h4">Describe any abnormal speech patterns below:</label>
+								<textarea id="PEabspeech" class="form-control" rows="3"></textarea>
+							</div>
 						</section>
 						
 						<section class="clearfix PEsingles col-sm-9 col-sm-offset-1">
