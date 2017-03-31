@@ -22,4 +22,28 @@ $(document).ready(function(){
 			});
 		}
 	});
+	
+	$('body').on('change', "#MDMform", calculateMDM);
 });
+
+function calculateMDM() {
+	var MDMproblems = { "MDMminprob":1, "MDMstabprob":1, "MDMworseprob":2, "MDMnewprobno":3, "MDMnewprobyes":4 };
+	var problem_types = {}, problem_points = 0;
+	
+	for (var key in MDMproblems) {
+		if (MDMproblems.hasOwnProperty(key)) {
+			problem_types[key] = [];
+			$('#MDMform input.' + key).each(function() {
+				if ($(this).val()) {
+					problem_types[key].push($(this).val());
+				}
+			});
+		}
+	}
+		
+	for (problem in problem_types) {
+		if (problem_types.hasOwnProperty(problem)) {
+			problem_points += (problem_types[problem].length * MDMproblems[problem]);
+		}
+	}
+}
