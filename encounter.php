@@ -187,6 +187,7 @@ $return = true;
 							<p class="text-danger">Choose one from the list below. If more than one applies, choose the one that is higher in the list.</p>
 							<div class="col-sm-4 col-sm-offset-4">
 								<select id="MDMriskmenu" class="form-control">
+									<option disabled selected>Select from dropdown list</option>
 									<option value="mod">Stopping, starting, or changing Rx (other than LiCo)</option>
 									<option value="high">Drug therapy requiring intensive monitoring for toxicity</option>
 									<option value="low">Having only 1 well-controlled chronic illness</option>
