@@ -28,7 +28,8 @@ $(document).ready(function(){
 
 function calculateMDM() {
 	var MDMproblems = { "MDMminprob":1, "MDMstabprob":1, "MDMworseprob":2, "MDMnewprobno":3, "MDMnewprobyes":4 };
-	var problem_types = {}, problem_points = 0;
+	var MDMdata = { "MDMdatalab":1, "MDMdataradio":1, "MDMdatamedicine":1, "MDMdatadiscuss":1, "MDMdatarecdec":1, "MDMdatarecrev":2 };
+	var problem_types = {}, problem_points = 0, data_points = 0;
 	
 	for (var key in MDMproblems) {
 		if (MDMproblems.hasOwnProperty(key)) {
@@ -41,9 +42,17 @@ function calculateMDM() {
 		}
 	}
 		
-	for (problem in problem_types) {
-		if (problem_types.hasOwnProperty(problem)) {
-			problem_points += (problem_types[problem].length * MDMproblems[problem]);
+	for (var key in problem_types) {
+		if (problem_types.hasOwnProperty(key)) {
+			problem_points += (problem_types[key].length * MDMproblems[key]);
+		}
+	}
+	
+	for (var key in MDMdata) {
+		if (MDMdata.hasOwnProperty(key)) {
+			if ($('#MDMform input#' + key).is(':checked')) {
+				data_points += (MDMdata[key])
+			}
 		}
 	}
 }
