@@ -70,13 +70,13 @@ $return = true;
 						<section id="MDMproblems">
 							<section class="clearfix col-sm-12 minorproblems">
 								<div class="row">
-									<label for="MDMminprob[]" class="control-label col-sm-4 text-right">Self-limited or minor problem #1</label>
+									<label for="MDMminprob[]" class="control-label col-sm-4 text-right">Self-limited or minor problem #1<br><span class="text-danger">(max of 2)</span></label>
 									<div class="form-group col-sm-7">
 										<input type="text" value="" class="form-control MDMminprob" name="MDMminprob[]">
 									</div>
 								</div>
 								<div class="row">
-									<label for="MDMminprob[]" class="control-label col-sm-4 text-right">Self-limited or minor problem #2</label>
+									<label for="MDMminprob[]" class="control-label col-sm-4 text-right">Self-limited or minor problem #2<br><span class="text-danger">(max of 2)</span></label>
 									<div class="form-group col-sm-7">
 										<input type="text" value="" class="form-control MDMminprob" name="MDMminprob[]">
 									</div>
@@ -119,7 +119,7 @@ $return = true;
 							
 							<section class="clearfix col-sm-12 newproblemsnowork">
 								<div class="row">
-									<label for="MDMnewprobno" class="control-label col-sm-4 text-right">New problem, no additional workup planned</label>
+									<label for="MDMnewprobno" class="control-label col-sm-4 text-right">New problem, no additional workup planned<br><span class="text-danger">(max of 1)</span></label>
 									<div class="form-group col-sm-7">
 										<input type="text" value="" class="form-control MDMnewprobno" name="MDMnewprobno">
 									</div>
