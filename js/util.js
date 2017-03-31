@@ -64,15 +64,12 @@ function calculateMDM() {
 		case (problem_points <= 1):
 			problem_result = 1;
 			break;
-		
 		case (problem_points == 2):
 			problem_result = 2;
 			break;
-		
 		case (problem_points <= 3):
 			problem_result = 3;
 			break;
-		
 		case (problem_points >= 4):
 			problem_result = 4;
 			break;
@@ -82,15 +79,12 @@ function calculateMDM() {
 		case (data_points <= 1):
 			data_result = 1;
 			break;
-		
 		case (data_points == 2):
 			data_result = 2;
 			break;
-		
 		case (data_points <= 3):
 			data_result = 3;
 			break;
-		
 		case (data_points >= 4):
 			data_result = 4;
 			break;
