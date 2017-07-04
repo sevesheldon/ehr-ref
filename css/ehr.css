@@ -94,6 +94,7 @@ input[type=checkbox] {
 #ROSform .checkbox, 
 #PEform .checkbox {
 	margin-top: 0px;
+	margin-bottom: 5px;
 }
 
 #ROSform h4.text-right {

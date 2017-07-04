@@ -342,58 +342,64 @@ $return = true;
 						
 						<section class="clearfix">
 							<div class="form-group col-sm-10 col-sm-offset-1">
+								<div class="row">
+									<label for="PFSHsocial" class="col-sm-4 control-label">Pertinent social issues affecting health.</label>
+									<div class="col-sm-8">
+										<textarea type="text" class="form-control" id="PFSHsocial" rows="3"></textarea>
+									</div>
+								</div>
 								<h4 class="text-center">Check boxes for "yes"</h4>
-								<label for="PFSHsocial" class="col-sm-4 control-label">Pertinent social issues affecting health.</label>
-								<div class="col-sm-8">
-									<textarea type="text" class="form-control" id="PFSHsocial" rows="3"></textarea>
-								</div>
-								<div class="col-sm-3 col-sm-offset-3">
-									<div class="checkbox">
-										<label for="PFSHjob">
-											<input type="checkbox" value="" id="PFSHjob">Has a job?
-										</label>
+								<div class="row">
+									<div class="col-sm-3 col-sm-offset-3">
+										<div class="checkbox">
+											<label for="PFSHjob">
+												<input type="checkbox" value="" id="PFSHjob">Has a job?
+											</label>
+										</div>
+										<div class="checkbox">
+											<label for="PFSHcar">
+												<input type="checkbox" value="" id="PFSHcar">Has a car?
+											</label>
+										</div>
+										<div class="checkbox">
+											<label for="PFSHcsection">
+												<input type="checkbox" value="" id="PFSHcsection">C-section birth?
+											</label>
+										</div>
+										<div class="checkbox">
+											<label for="PFSHgallbladder">
+												<input type="checkbox" value="" id="PFSHgallbladder">Has a gallbladder?
+											</label>
+										</div>
 									</div>
-									<div class="checkbox">
-										<label for="PFSHcar">
-											<input type="checkbox" value="" id="PFSHcar">Has a car?
-										</label>
-									</div>
-									<div class="checkbox">
-										<label for="PFSHcsection">
-											<input type="checkbox" value="" id="PFSHcsection">C-section birth?
-										</label>
-									</div>
-									<div class="checkbox">
-										<label for="PFSHgallbladder">
-											<input type="checkbox" value="" id="PFSHgallbladder">Has a gallbladder?
-										</label>
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="checkbox">
-										<label for="PFSHgbs">
-											<input type="checkbox" value="" id="PFSHgbs">Gastric bypass surgery?
-										</label>
-									</div>
-									<div class="checkbox">
-										<label for="PFSHtherapy">
-											<input type="checkbox" value="" id="PFSHtherapy">Speech or physical therapy?
-										</label>
-									</div>
-									<div class="checkbox">
-										<label for="PFSHread">
-											<input type="checkbox" value="" id="PFSHread">Learned to read at normal age?
-										</label>
+									<div class="col-sm-4">
+										<div class="checkbox">
+											<label for="PFSHgbs">
+												<input type="checkbox" value="" id="PFSHgbs">Gastric bypass surgery?
+											</label>
+										</div>
+										<div class="checkbox">
+											<label for="PFSHtherapy">
+												<input type="checkbox" value="" id="PFSHtherapy">Speech or physical therapy?
+											</label>
+										</div>
+										<div class="checkbox">
+											<label for="PFSHread">
+												<input type="checkbox" value="" id="PFSHread">Learned to read at normal age?
+											</label>
+										</div>
 									</div>
 								</div>
-								<div class="col-sm-8 col-sm-offset-2">
-									<label for="PFSHeducation" class="col-sm-5 control-label">Furthest educational level</label>
-									<div class="col-sm-7">
-										<input type="text" class="form-control" id="PFSHeducation">
-									</div>
-									<label for="PFSHhousing" class="col-sm-5 control-label">Housing</label>
-									<div class="col-sm-7">
-										<input type="text" class="form-control" id="PFSHhousing">
+								<div class="row">
+									<div class="col-sm-8 col-sm-offset-2">
+										<label for="PFSHeducation" class="col-sm-5 control-label">Furthest educational level</label>
+										<div class="col-sm-7">
+											<input type="text" class="form-control" id="PFSHeducation">
+										</div>
+										<label for="PFSHhousing" class="col-sm-5 control-label">Housing</label>
+										<div class="col-sm-7">
+											<input type="text" class="form-control" id="PFSHhousing">
+										</div>
 									</div>
 								</div>
 							</div>
