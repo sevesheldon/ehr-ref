@@ -612,7 +612,7 @@ $return = true;
 							
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<label for="ROSeyes"><h4>Eyes</h4></label>
+									<label for="ROSeyes" class="h4">Eyes</label>
 								</div>
 								<div class="form-group col-sm-4 clearfix">
 									<div class="checkbox">
@@ -620,7 +620,7 @@ $return = true;
 									</div>
 								</div>
 								<div class="col-sm-2 text-right">
-									<label for="ROSent"><h4>Ear/Nose/Throat</h4></label>
+									<label for="ROSent" class="h4">Ear/Nose/Throat</label>
 								</div>
 								<div class="form-group col-sm-4">
 									<div class="checkbox">
@@ -631,7 +631,7 @@ $return = true;
 							
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<label for="ROSresp"><h4>Respiratory</h4></label>
+									<label for="ROSresp" class="h4">Respiratory</label>
 								</div>
 								<div class="form-group col-sm-4">
 									<div class="checkbox">
@@ -639,7 +639,7 @@ $return = true;
 									</div>
 								</div>
 								<div class="col-sm-2 text-right">
-									<label for="ROSgu"><h4>Genitourinary</h4></label>
+									<label for="ROSgu" class="h4">Genitourinary</label>
 								</div>
 								<div class="form-group col-sm-4">
 									<div class="checkbox">
@@ -650,7 +650,7 @@ $return = true;
 						
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<label for="ROSskin"><h4>Skin</h4></label>
+									<label for="ROSskin" class="h4">Skin</label>
 								</div>
 								<div class="form-group col-sm-4">
 									<div class="checkbox">
@@ -658,7 +658,7 @@ $return = true;
 									</div>
 								</div>
 								<div class="col-sm-2 text-right">
-									<label for="ROSendo"><h4>Endocrine</h4></label>
+									<label for="ROSendo" class="h4">Endocrine</label>
 								</div>
 								<div class="form-group col-sm-4">
 									<div class="checkbox">
@@ -669,7 +669,7 @@ $return = true;
 						
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<label for="ROShl"><h4>Hem/Lymphatic</h4></label>
+									<label for="ROShl" class="h4">Hem/Lymphatic</label>
 								</div>
 								<div class="form-group col-sm-4">
 									<div class="checkbox">
@@ -677,7 +677,7 @@ $return = true;
 									</div>
 								</div>
 								<div class="col-sm-2 text-right">
-									<label for="ROSai"><h4>Allergic/Immun</h4></label>
+									<label for="ROSai" class="h4">Allergic/Immun</label>
 								</div>
 								<div class="form-group col-sm-4">
 									<div class="checkbox">
@@ -906,78 +906,88 @@ $return = true;
 								</div>
 						</section>
 						
-						<section class="clearfix col-sm-6 col-sm-offset-3 text-center">
-							<div class="row">
+						<section class="clearfix text-center">
+							<div class="row col-sm-6 col-sm-offset-3 ">
 								<label for="PEabspeech" class="h4">Describe any abnormal speech patterns below:</label>
 								<textarea id="PEabspeech" class="form-control" rows="3"></textarea>
 							</div>
 						</section>
 						
-						<section class="clearfix PEsingles col-sm-9 col-sm-offset-1">
+						<section class="clearfix PEsingles">
+							<div class="row">
+								<h4 class="text-center">Check boxes if normal</h4>
+							</div>
 							<div class="row">
 								<div class="col-sm-5 text-right">
-									<label for="PEji">Judgment and insight intact</label>
+									<label for="PEji"><h4>Judgment and insight intact</label>
 								</div>
-								<div class="form-group col-sm-1 clearfix">
+								<div class="form-group col-sm-7">
 									<div class="checkbox">
 										<input type="checkbox" value="" id="PEji">
 									</div>
 								</div>
+							</div>
+							<div class="row">
 								<div class="col-sm-5 text-right">
-									<label for="PEAOx3">Alert &amp; Oriented x3</label>
+									<label for="PEAOx3" class="h4">Alert &amp; Oriented x3</label>
 								</div>
-								<div class="form-group col-sm-1">
+								<div class="form-group col-sm-7">
 									<div class="checkbox">
 										<input type="checkbox" value="" id="PEAOx3">
+										<input type="text" value="" class="form-control" name="PEAOx3Elaboration" placeholder="Please Elaborate">
 									</div>
 								</div>
 							</div>
-							
 							<div class="row">
 								<div class="col-sm-5 text-right">
-									<label for="PEmemory">Recent and remote memory intact</label>
+									<label for="PEmemory" class="h4">Recent and remote memory intact</label>
 								</div>
-								<div class="form-group col-sm-1 clearfix">
+								<div class="form-group col-sm-7 clearfix">
 									<div class="checkbox">
 										<input type="checkbox" value="" id="PEmemory">
 									</div>
 								</div>
+							</div>
+							<div class="row">
 								<div class="col-sm-5 text-right">
-									<label for="PEattention">Normal attention span and concentration</label>
+									<label for="PEattention" class="h4">Normal attention span and concentration</label>
 								</div>
-								<div class="form-group col-sm-1">
+								<div class="form-group col-sm-7">
 									<div class="checkbox">
 										<input type="checkbox" value="" id="PEattention">
 									</div>
 								</div>
 							</div>
-							
 							<div class="row">
 								<div class="col-sm-5 text-right">
-									<label for="PElanguage">Language (naming objects, repeating phrases)</label>
+									<label for="PElanguage" class="h4">Language (naming objects, repeating phrases)</label>
 								</div>
-								<div class="form-group col-sm-1 clearfix">
+								<div class="form-group col-sm-7 clearfix">
 									<div class="checkbox">
 										<input type="checkbox" value="" id="PElanguage">
-									</div>
-								</div>
-								<div class="col-sm-5 text-right">
-									<label for="PEknowledge">Fund of knowledge</label>
-								</div>
-								<div class="form-group col-sm-1">
-									<div class="checkbox">
-										<input type="checkbox" value="" id="PEknowledge">
+										<input type="text" value="" class="form-control" name="PElanguageElaboration" placeholder="Please Elaborate">
 									</div>
 								</div>
 							</div>
-							
 							<div class="row">
 								<div class="col-sm-5 text-right">
-									<label for="PEgait">Gait and station</label>
+									<label for="PEknowledge" class="h4">Fund of knowledge</label>
 								</div>
-								<div class="form-group col-sm-1 clearfix">
+								<div class="form-group col-sm-7">
+									<div class="checkbox">
+										<input type="checkbox" value="" id="PEknowledge">
+										<input type="text" value="" class="form-control" name="PEknowledgeElaboration" placeholder="Please Elaborate">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-5 text-right">
+									<label for="PEgait" class="h4">Gait and station</label>
+								</div>
+								<div class="form-group col-sm-7 clearfix">
 									<div class="checkbox">
 										<input type="checkbox" value="" id="PEgait">
+										<input type="text" value="" class="form-control" name="PEgaitElaboration" placeholder="Please Elaborate">
 									</div>
 								</div>
 							</div>

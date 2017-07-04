@@ -58,6 +58,10 @@ $(document).ready(function(){
 	$("#ROSform").on('change', 'section.ROSsingles input[type=checkbox]', {inverse: false}, genericAddTextField);
 	$("#PFSHform").on('change', 'input[type=checkbox]#PFSHtherapy', {inverse: false}, genericAddTextField);
 	$("#PFSHform").on('change', 'input[type=checkbox]#PFSHread', {inverse: true},genericAddTextField);
+	$("#PEform").on('change', 'input[type=checkbox]#PElanguage', {inverse: true},genericAddTextField);
+	$("#PEform").on('change', 'input[type=checkbox]#PEknowledge', {inverse: true},genericAddTextField);
+	$("#PEform").on('change', 'input[type=checkbox]#PEgait', {inverse: true},genericAddTextField);
+	$("#PEform").on('change', 'input[type=checkbox]#PEAOx3', {inverse: true},genericAddTextField);
 });
 
 function calculateMDM() {
