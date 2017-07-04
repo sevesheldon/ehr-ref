@@ -360,7 +360,7 @@ $return = true;
 									</div>
 									<div class="checkbox">
 										<label for="PFSHcsection">
-											<input type="checkbox" value="" id="PFSHcsection">C-section?
+											<input type="checkbox" value="" id="PFSHcsection">C-section birth?
 										</label>
 									</div>
 									<div class="checkbox">
@@ -439,7 +439,7 @@ $return = true;
 								</div>
 								<div class="checkbox">
 									<label for="ROSpsychother1">
-										<input type="checkbox" value="" id="ROSpsychother1">Other (type over this text in your own words)
+										<input type="checkbox" value="" id="ROSpsychother1" class="ROSother"><span class="othertext">Other</span>
 									</label>
 								</div>
 							</div>
@@ -479,7 +479,7 @@ $return = true;
 								</div>
 								<div class="checkbox">
 									<label for="ROSconother1">
-										<input type="checkbox" value="" id="ROSconother1">Other (type over this text in your own words)
+										<input type="checkbox" value="" id="ROSconother1" class="ROSother"><span class="othertext">Other</span>
 									</label>
 								</div>
 							</div>
@@ -502,7 +502,7 @@ $return = true;
 								</div>
 								<div class="checkbox">
 									<label for="ROScvother1">
-										<input type="checkbox" value="" id="ROScvother1">Other (type over this text in your own words)
+										<input type="checkbox" value="" id="ROScvother1" class="ROSother"><span class="othertext">Other</span>
 									</label>
 								</div>
 							</div>
@@ -514,14 +514,20 @@ $return = true;
 									<label for="ROSmuscle">
 										<input type="checkbox" value="" id="ROSmuscle">Muscle Weakness
 									</label>
+								</div>
+								<div class="checkbox">
 									<label for="ROSjoint">
 										<input type="checkbox" value="" id="ROSjoint">Joint Swelling
 									</label>
+								</div>
+								<div class="checkbox">
 									<label for="ROSnsaid">
 										<input type="checkbox" value="" id="ROSnsaid">NSAID use
 									</label>
+								</div>
+								<div class="checkbox">
 									<label for="ROSskelother1">
-										<input type="checkbox" value="" id="ROSskelother1">Other (type over this text in your own words)
+										<input type="checkbox" value="" id="ROSskelother1" class="ROSother"><span class="othertext">Other</span>
 									</label>
 								</div>
 							</div>
@@ -553,8 +559,8 @@ $return = true;
 									</label>
 								</div>
 								<div class="checkbox">
-									<label for="ROSgasother1">
-										<input type="checkbox" value="" id="ROSgasother1">Other (type over this text in your own words)
+									<label for="ROSgiother1">
+										<input type="checkbox" value="" id="ROSgiother1" class="ROSother"><span class="othertext">Other</span>
 									</label>
 								</div>
 							</div>
@@ -566,17 +572,25 @@ $return = true;
 									<label for="ROSmigraines">
 										<input type="checkbox" value="" id="ROSmigraines">Migraines
 									</label>
+								</div>
+								<div class="checkbox">
 									<label for="ROSnumbness">
 										<input type="checkbox" value="" id="ROSnumbness">Numbness
 									</label>
+								</div>
+								<div class="checkbox">
 									<label for="ROSvertigo">
 										<input type="checkbox" value="" id="ROSvertigo">Vertigo
 									</label>
+								</div>
+								<div class="checkbox">
 									<label for="ROStremors">
 										<input type="checkbox" value="" id="ROStremors">Tremors
 									</label>
+								</div>
+								<div class="checkbox">
 									<label for="ROSneuroother1">
-										<input type="checkbox" value="" id="ROSneuroother1">Other (type over this text in your own words)
+										<input type="checkbox" value="" id="ROSneuroother1" class="ROSother"><span class="othertext">Other</span>
 									</label>
 								</div>
 							</div>
@@ -584,8 +598,14 @@ $return = true;
 						
 						<section class="clearfix ROSsingles">
 							<div class="row">
+								<div class="text-center">
+									<h4>Check boxes <b>ONLY</b> if any of the following systems are <b>NOT</b> normal</h4>
+								</div>
+							</div>
+							
+							<div class="row">
 								<div class="col-sm-2 text-right">
-									<label for="ROSeyes">Eyes</label>
+									<label for="ROSeyes"><h4>Eyes</h4></label>
 								</div>
 								<div class="form-group col-sm-4 clearfix">
 									<div class="checkbox">
@@ -593,7 +613,7 @@ $return = true;
 									</div>
 								</div>
 								<div class="col-sm-2 text-right">
-									<label for="ROSent">Ear/Nose/Throat</label>
+									<label for="ROSent"><h4>Ear/Nose/Throat</h4></label>
 								</div>
 								<div class="form-group col-sm-4">
 									<div class="checkbox">
@@ -604,7 +624,7 @@ $return = true;
 							
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<label for="ROSresp">Respiratory</label>
+									<label for="ROSresp"><h4>Respiratory</h4></label>
 								</div>
 								<div class="form-group col-sm-4">
 									<div class="checkbox">
@@ -612,7 +632,7 @@ $return = true;
 									</div>
 								</div>
 								<div class="col-sm-2 text-right">
-									<label for="ROSgu">Genitourinary</label>
+									<label for="ROSgu"><h4>Genitourinary</h4></label>
 								</div>
 								<div class="form-group col-sm-4">
 									<div class="checkbox">
@@ -623,7 +643,7 @@ $return = true;
 						
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<label for="ROSskin">Skin</label>
+									<label for="ROSskin"><h4>Skin</h4></label>
 								</div>
 								<div class="form-group col-sm-4">
 									<div class="checkbox">
@@ -631,7 +651,7 @@ $return = true;
 									</div>
 								</div>
 								<div class="col-sm-2 text-right">
-									<label for="ROSendo">Endocrine</label>
+									<label for="ROSendo"><h4>Endocrine</h4></label>
 								</div>
 								<div class="form-group col-sm-4">
 									<div class="checkbox">
@@ -642,7 +662,7 @@ $return = true;
 						
 							<div class="row">
 								<div class="col-sm-2 text-right">
-									<label for="ROShl">Hem/Lymphatic</label>
+									<label for="ROShl"><h4>Hem/Lymphatic</h4></label>
 								</div>
 								<div class="form-group col-sm-4">
 									<div class="checkbox">
@@ -650,7 +670,7 @@ $return = true;
 									</div>
 								</div>
 								<div class="col-sm-2 text-right">
-									<label for="ROSai">Allergic/Immun</label>
+									<label for="ROSai"><h4>Allergic/Immun</h4></label>
 								</div>
 								<div class="form-group col-sm-4">
 									<div class="checkbox">

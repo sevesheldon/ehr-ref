@@ -40,6 +40,7 @@ $(document).ready(function(){
 		$("#targetcode").css("font-size", "22px");
 	});
 	
+	// When a new problem with additional planned workup is entered, add a text box for the additional planned workup
 	$("#MDMform").on('change', 'section.newproblemsyeswork input.MDMnewprobyes', function() {
 		$parent = $(this).parent();
 		if ($(this).val()) {
@@ -51,6 +52,33 @@ $(document).ready(function(){
 			$("input + input", $parent).remove();
 		}
 	});
+	
+	// When clicking any of the "ROSSingles" fields dynamically add a text box
+	$("#ROSform").on('change', 'section.ROSsingles input[type=checkbox]', function() {
+		$parent = $(this).parent();
+		$id = $(this).attr('id');
+		if ($(this).is(':checked')) {
+			$parent.append("<input type=\"text\" value=\"\" class=\"form-control\" name=\"" + $id + "Elaboration\" placeholder=\"Please Elaborate\">");
+			$("input + input", $parent).focus();
+		} else {
+			$("input + input", $parent).remove();
+		}
+	});
+		
+	// When clicking any of the "Other" fields on any system, dynamically add a text box
+	$("#ROSform").on('change', 'input[type=checkbox].ROSother', function() {
+		$parent = $(this).parent();
+		$id = $(this).attr('id');
+		if ($(this).is(':checked')) {
+			$("input.ROSother + span.othertext", $parent).text('Other');
+			$parent.append("<input type=\"text\" value=\"\" class=\"form-control\" name=\"" + $id + "Elaboration\" placeholder=\"(type over this text in your own words)\">");
+			$("input.ROSother + span.othertext + input", $parent).focus();
+		} else {
+			$("input.ROSother + span.othertext + input", $parent).remove();
+			$("input.ROSother + span.othertext", $parent).text('Other (type over this text in your own words)');
+		}
+	});
+
 });
 
 function calculateMDM() {

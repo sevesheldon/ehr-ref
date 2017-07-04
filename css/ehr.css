@@ -48,6 +48,12 @@ section {
 	margin-bottom: 10px;
 }
 
+label,
+input[type=checkbox] {
+	cursor: pointer;
+}
+
+
 #history h1 {
 	margin-top: 10px;
 }
@@ -76,14 +82,26 @@ section {
 }
 
 
+.ROSsingles > div.row:first-child {
+	margin-bottom: 15px;
+}
 
-.ROSsingles .checkbox, 
-.PEsingles .checkbox, 
+
+#ROSform div.form-group div.checkbox:last-child {
+	height: 39px;
+}
+
+#ROSform .checkbox, 
 #PEform .checkbox {
 	margin-top: 0px;
 }
 
+#ROSform h4.text-right {
+	margin-top: 2px;
+}
+
 .ROSsingles .form-group,
+.ROSsingles .checkbox,
 .PEsingles .form-group {
 	margin-bottom: 0px;
 }
@@ -93,12 +111,28 @@ section {
 	font-weight: normal;
 }
 
+.ROSsingles label h4 {
+	margin-top: 4px;
+}
+
 .ROSsingles .form-group .checkbox input[type=checkbox],
 .PEsingles .form-group .checkbox input[type=checkbox] {
 	margin-left: 0px;
 }
 
+.ROSsingles .checkbox input + input {
+	margin-left: 18px;
+}
 
+#ROSform .ROSother + .othertext {
+	vertical-align: top;
+}
+
+#ROSform .ROSother + .othertext + input {
+	width: 80%;
+    margin-left: 5px;
+    display: inline-block;
+}
 
 #PEform section div h4,
 #PEform section div .h4 {
@@ -124,6 +158,8 @@ section {
 .PEsingles .row:last-child {
 	margin-top: 20px;
 }
+
+
 
 #MDMresult {
 	color: #333;
