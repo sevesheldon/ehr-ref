@@ -81,11 +81,13 @@ input[type=checkbox] {
 	width: 100%;
 }
 
+#PFSHform #PFSHtherapy + input {
+    margin-top: 5px;
+}
 
 .ROSsingles > div.row:first-child {
 	margin-bottom: 15px;
 }
-
 
 #ROSform div.form-group div.checkbox:last-child {
 	height: 39px;
@@ -125,14 +127,11 @@ input[type=checkbox] {
 	margin-left: 18px;
 }
 
-#ROSform .ROSother + .othertext {
-	vertical-align: top;
-}
-
-#ROSform .ROSother + .othertext + input {
+#ROSform .ROSother + input {
 	width: 80%;
     margin-left: 5px;
     display: inline-block;
+	vertical-align: top;
 }
 
 #PEform section div h4,

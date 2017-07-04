@@ -53,32 +53,11 @@ $(document).ready(function(){
 		}
 	});
 	
-	// When clicking any of the "ROSSingles" fields dynamically add a text box
-	$("#ROSform").on('change', 'section.ROSsingles input[type=checkbox]', function() {
-		$parent = $(this).parent();
-		$id = $(this).attr('id');
-		if ($(this).is(':checked')) {
-			$parent.append("<input type=\"text\" value=\"\" class=\"form-control\" name=\"" + $id + "Elaboration\" placeholder=\"Please Elaborate\">");
-			$("input + input", $parent).focus();
-		} else {
-			$("input + input", $parent).remove();
-		}
-	});
-		
-	// When clicking any of the "Other" fields on any system, dynamically add a text box
-	$("#ROSform").on('change', 'input[type=checkbox].ROSother', function() {
-		$parent = $(this).parent();
-		$id = $(this).attr('id');
-		if ($(this).is(':checked')) {
-			$("input.ROSother + span.othertext", $parent).text('Other');
-			$parent.append("<input type=\"text\" value=\"\" class=\"form-control\" name=\"" + $id + "Elaboration\" placeholder=\"(type over this text in your own words)\">");
-			$("input.ROSother + span.othertext + input", $parent).focus();
-		} else {
-			$("input.ROSother + span.othertext + input", $parent).remove();
-			$("input.ROSother + span.othertext", $parent).text('Other (type over this text in your own words)');
-		}
-	});
-
+	// When clicking ROS Singles, the "Other" fields on any system, PFSH speech/physical therapy, or Learned to read fields dynamically add a text box
+	$("#ROSform").on('change', 'input[type=checkbox].ROSother', {inverse: false}, genericAddTextField);
+	$("#ROSform").on('change', 'section.ROSsingles input[type=checkbox]', {inverse: false}, genericAddTextField);
+	$("#PFSHform").on('change', 'input[type=checkbox]#PFSHtherapy', {inverse: false}, genericAddTextField);
+	$("#PFSHform").on('change', 'input[type=checkbox]#PFSHread', {inverse: true},genericAddTextField);
 });
 
 function calculateMDM() {
@@ -180,4 +159,16 @@ function calculateMDM() {
 		<li style=\"font-size: 18px;\">Risk to patient: " + devrisk + "</li> \
 		</ul>"		
 	);
+}
+
+function genericAddTextField(event) {
+	$inverse = event.data.inverse;
+	$parent = $(this).parent();
+	$id = $(this).attr('id');
+	if (($(this).is(':checked') && !$inverse) || (!$(this).is(':checked') && $inverse)) {
+		$parent.append("<input type=\"text\" value=\"\" class=\"form-control\" name=\"" + $id + "Elaboration\" placeholder=\"Please Elaborate\">");
+		$("input + input", $parent).focus();
+	} else {
+		$("input + input", $parent).remove();
+	}
 }

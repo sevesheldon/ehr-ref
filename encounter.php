@@ -372,7 +372,7 @@ $return = true;
 											</label>
 										</div>
 									</div>
-									<div class="col-sm-4">
+									<div class="col-sm-6">
 										<div class="checkbox">
 											<label for="PFSHgbs">
 												<input type="checkbox" value="" id="PFSHgbs">Gastric bypass surgery?
@@ -386,6 +386,7 @@ $return = true;
 										<div class="checkbox">
 											<label for="PFSHread">
 												<input type="checkbox" value="" id="PFSHread">Learned to read at normal age?
+												<input type="text" value="" class="form-control" name="PFSHreadElaboration" placeholder="Please Elaborate">
 											</label>
 										</div>
 									</div>
@@ -445,7 +446,7 @@ $return = true;
 								</div>
 								<div class="checkbox">
 									<label for="ROSpsychother1">
-										<input type="checkbox" value="" id="ROSpsychother1" class="ROSother"><span class="othertext">Other</span>
+										<input type="checkbox" value="" id="ROSpsychother1" class="ROSother">Other
 									</label>
 								</div>
 							</div>
@@ -485,7 +486,7 @@ $return = true;
 								</div>
 								<div class="checkbox">
 									<label for="ROSconother1">
-										<input type="checkbox" value="" id="ROSconother1" class="ROSother"><span class="othertext">Other</span>
+										<input type="checkbox" value="" id="ROSconother1" class="ROSother">Other
 									</label>
 								</div>
 							</div>
@@ -508,7 +509,7 @@ $return = true;
 								</div>
 								<div class="checkbox">
 									<label for="ROScvother1">
-										<input type="checkbox" value="" id="ROScvother1" class="ROSother"><span class="othertext">Other</span>
+										<input type="checkbox" value="" id="ROScvother1" class="ROSother">Other
 									</label>
 								</div>
 							</div>
@@ -533,7 +534,7 @@ $return = true;
 								</div>
 								<div class="checkbox">
 									<label for="ROSskelother1">
-										<input type="checkbox" value="" id="ROSskelother1" class="ROSother"><span class="othertext">Other</span>
+										<input type="checkbox" value="" id="ROSskelother1" class="ROSother">Other
 									</label>
 								</div>
 							</div>
@@ -566,7 +567,7 @@ $return = true;
 								</div>
 								<div class="checkbox">
 									<label for="ROSgiother1">
-										<input type="checkbox" value="" id="ROSgiother1" class="ROSother"><span class="othertext">Other</span>
+										<input type="checkbox" value="" id="ROSgiother1" class="ROSother">Other
 									</label>
 								</div>
 							</div>
@@ -596,7 +597,7 @@ $return = true;
 								</div>
 								<div class="checkbox">
 									<label for="ROSneuroother1">
-										<input type="checkbox" value="" id="ROSneuroother1" class="ROSother"><span class="othertext">Other</span>
+										<input type="checkbox" value="" id="ROSneuroother1" class="ROSother">Other
 									</label>
 								</div>
 							</div>
