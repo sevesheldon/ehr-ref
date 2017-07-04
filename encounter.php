@@ -345,7 +345,7 @@ $return = true;
 								<h4 class="text-center">Check boxes for "yes"</h4>
 								<label for="PFSHsocial" class="col-sm-4 control-label">Pertinent social issues affecting health.</label>
 								<div class="col-sm-8">
-									<textarea type="text" class="form-control" id="PFSHfamily" rows="3"></textarea>
+									<textarea type="text" class="form-control" id="PFSHsocial" rows="3"></textarea>
 								</div>
 								<div class="col-sm-3 col-sm-offset-3">
 									<div class="checkbox">
