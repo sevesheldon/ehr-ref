@@ -377,7 +377,7 @@ $return = true;
 									</div>
 									<div class="checkbox">
 										<label for="PFSHtherapy">
-											<input type="checkbox" value="" id="PFSHjob">Speech or physical therapy?
+											<input type="checkbox" value="" id="PFSHtherapy">Speech or physical therapy?
 										</label>
 									</div>
 									<div class="checkbox">
