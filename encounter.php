@@ -963,7 +963,7 @@ $return = true;
 							</div>
 							<div class="row">
 								<div class="col-sm-5 text-right">
-									<label for="PEji"><h4>Judgment and insight intact</label>
+									<label for="PEji"><h4>Judgement and insight intact</label>
 								</div>
 								<div class="form-group col-sm-7">
 									<div class="checkbox">
