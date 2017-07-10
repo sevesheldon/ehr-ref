@@ -894,7 +894,7 @@ $return = true;
 										</div>
 										<div class="checkbox">
 											<label for="PEobs">
-												<input type="checkbox" value="" id="PEobs">obsessions
+												<input type="checkbox" value="" id="PEobs">Obsessions
 											</label>
 										</div>
 										<div class="checkbox">
