@@ -162,10 +162,14 @@ input[type=checkbox] {
 	font-weight: 700;
 }
 
-.PEsingles .row:last-child {
+.PEsingles .row:last-child:not(#PEgadevelrow) {
 	margin-top: 20px;
 }
 
+/* CSS2 selector to insure compatability of above rule in older browsers */
+.PEsingles #PEgadevelrow {
+	margin-top: inherit;	
+}
 
 
 #MDMresult {

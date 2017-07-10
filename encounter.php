@@ -755,6 +755,50 @@ $return = true;
 							</div>
 						</section>
 						
+						<section class="clearfix PEsingles">
+							<div class="col-sm-3 text-right">
+								<h4>General Appearance</h4>
+							</div>
+							
+							<div class="col-sm-9">
+								<div class="row">
+									<div class="col-sm-4 text-right">
+										<label for="PEgagroom">Appropriately groomed and dressed</label>
+									</div>
+									<div class="form-group col-sm-8">
+										<div class="checkbox">
+											<input type="checkbox" value="" id="PEgagroom">
+											<input type="text" value="" class="form-control" name="PEgagroomElaboration" placeholder="Inappropriately groomed and/or dressed - Please Elaborate">
+										</div>
+									</div>
+								</div>
+							
+								<div class="row">
+									<div class="col-sm-4 text-right">
+										<label for="PEganourish">Well-nourished</label>
+									</div>
+									<div class="form-group col-sm-8">
+										<div class="checkbox">
+											<input type="checkbox" value="" id="PEganourish">
+											<input type="text" value="" class="form-control" name="PEganourishElaboration" placeholder="Pt. has nutritional deficiencies. - Please Elaborate">
+										</div>
+									</div>
+								</div>
+							
+								<div class="row" id="PEgadevelrow">
+									<div class="col-sm-4 text-right">
+										<label for="PEgadevel">Well-developed</label>
+									</div>
+									<div class="form-group col-sm-8">
+										<div class="checkbox">
+											<input type="checkbox" value="" id="PEgadevel">
+											<input type="text" value="" class="form-control" name="PEgadevelElaboration" placeholder="Has deformities relevant to mental status - Please Elaborate">
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						
 						<section class="clearfix">
 							<div class="col-sm-4">
 								<div class="row">
