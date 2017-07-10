@@ -53,15 +53,18 @@ $(document).ready(function(){
 		}
 	});
 	
-	// When clicking ROS Singles, the "Other" fields on any system, PFSH speech/physical therapy, or Learned to read fields dynamically add a text box
-	$("#ROSform").on('change', 'input[type=checkbox].ROSother', {inverse: false}, genericAddTextField);
-	$("#ROSform").on('change', 'section.ROSsingles input[type=checkbox]', {inverse: false}, genericAddTextField);
-	$("#PFSHform").on('change', 'input[type=checkbox]#PFSHtherapy', {inverse: false}, genericAddTextField);
+	// When clicking ROS Singles, the "Other" fields on any system, PFSH speech/physical therapy, or Learned to read fields dynamically add a text box for elaboration
+	$("#PFSHform").on('change', 'input[type=checkbox]#PFSHtherapy', genericAddTextField);
 	$("#PFSHform").on('change', 'input[type=checkbox]#PFSHread', {inverse: true},genericAddTextField);
+	$("#ROSform").on('change', 'input[type=checkbox].ROSother', genericAddTextField);
+	$("#ROSform").on('change', 'section.ROSsingles input[type=checkbox]', genericAddTextField);
+	$("#PEform").on('change', 'input[type=checkbox]#PEgagroom', {inverse: true, defaultText: "Inappropriately groomed and/or dressed - Please Elaborate"},genericAddTextField);
+	$("#PEform").on('change', 'input[type=checkbox]#PEganourish', {inverse: true, defaultText: "Pt. has nutritional deficiencies. - Please Elaborate"},genericAddTextField);
+	$("#PEform").on('change', 'input[type=checkbox]#PEgadevel', {inverse: true, defaultText: "Has deformities relevant to mental status - Please Elaborate"},genericAddTextField);
+	$("#PEform").on('change', 'input[type=checkbox]#PEAOx3', {inverse: true},genericAddTextField);
 	$("#PEform").on('change', 'input[type=checkbox]#PElanguage', {inverse: true},genericAddTextField);
 	$("#PEform").on('change', 'input[type=checkbox]#PEknowledge', {inverse: true},genericAddTextField);
 	$("#PEform").on('change', 'input[type=checkbox]#PEgait', {inverse: true},genericAddTextField);
-	$("#PEform").on('change', 'input[type=checkbox]#PEAOx3', {inverse: true},genericAddTextField);
 });
 
 function calculateMDM() {
@@ -166,11 +169,23 @@ function calculateMDM() {
 }
 
 function genericAddTextField(event) {
-	$inverse = event.data.inverse;
+	$inverse = false;
+	$defaultText = "Please Elaborate";
+	
+	if(typeof(event.data) != "undefined" && event.data !== null) {
+		if(typeof(event.data.inverse) != "undefined" && event.data.inverse !== null) {
+			$inverse = event.data.inverse;
+		}
+		
+		if(typeof(event.data.defaultText) != "undefined" && event.data.defaultText !== null) {
+			$defaultText = event.data.defaultText;
+		}
+	}
+	
 	$parent = $(this).parent();
 	$id = $(this).attr('id');
 	if (($(this).is(':checked') && !$inverse) || (!$(this).is(':checked') && $inverse)) {
-		$parent.append("<input type=\"text\" value=\"\" class=\"form-control\" name=\"" + $id + "Elaboration\" placeholder=\"Please Elaborate\">");
+		$parent.append("<input type=\"text\" value=\"\" class=\"form-control\" name=\"" + $id + "Elaboration\" placeholder=\"" + $defaultText + "\">");
 		$("input + input", $parent).focus();
 	} else {
 		$("input + input", $parent).remove();
