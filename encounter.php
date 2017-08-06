@@ -74,11 +74,13 @@ $return = true;
 									<div class="form-group col-sm-7">
 										<input type="text" value="" class="form-control MDMminprob" name="MDMminprob[]">
 									</div>
-								</div>
-								<div class="row">
-									<label for="MDMminprob[]" class="control-label col-sm-4 text-right">Self-limited or minor problem #2<br><span class="text-danger">(max of 2)</span></label>
-									<div class="form-group col-sm-7">
-										<input type="text" value="" class="form-control MDMminprob" name="MDMminprob[]">
+									<div clas="col-sm-1">
+										<button type="button" class="add-row btn btn-default alert-success">
+											<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+										</button>
+										<button type="button" class="remove-row btn btn-default alert-danger">
+											<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+										</button>
 									</div>
 								</div>
 							</section>
