@@ -959,9 +959,6 @@ $return = true;
 						
 						<section class="clearfix PEsingles">
 							<div class="row">
-								<h4 class="text-center">Check boxes if normal</h4>
-							</div>
-							<div class="row">
 								<div class="col-sm-5 text-right">
 									<label for="PEji"><h4>Judgement and insight intact</label>
 								</div>
@@ -1004,7 +1001,7 @@ $return = true;
 							</div>
 							<div class="row">
 								<div class="col-sm-5 text-right">
-									<label for="PElanguage" class="h4">Language (naming objects, repeating phrases)</label>
+									<label for="PElanguage" class="h4">Normal Language (naming objects, repeating phrases)</label>
 								</div>
 								<div class="form-group col-sm-7 clearfix">
 									<div class="checkbox">
@@ -1015,7 +1012,7 @@ $return = true;
 							</div>
 							<div class="row">
 								<div class="col-sm-5 text-right">
-									<label for="PEknowledge" class="h4">Fund of knowledge</label>
+									<label for="PEknowledge" class="h4">Normal Fund of knowledge</label>
 								</div>
 								<div class="form-group col-sm-7">
 									<div class="checkbox">
@@ -1026,7 +1023,7 @@ $return = true;
 							</div>
 							<div class="row">
 								<div class="col-sm-5 text-right">
-									<label for="PEgait" class="h4">Gait and station</label>
+									<label for="PEgait" class="h4">Normal Gait and station</label>
 								</div>
 								<div class="form-group col-sm-7 clearfix">
 									<div class="checkbox">
