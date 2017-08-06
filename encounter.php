@@ -352,7 +352,7 @@ $return = true;
 								</div>
 								<h4 class="text-center">Check boxes for "yes"</h4>
 								<div class="row">
-									<div class="col-sm-3 col-sm-offset-3">
+									<div class="col-sm-6">
 										<div class="checkbox">
 											<label for="PFSHjob">
 												<input type="checkbox" value="" id="PFSHjob">Has a job?
@@ -373,8 +373,6 @@ $return = true;
 												<input type="checkbox" value="" id="PFSHgallbladder">Has a gallbladder?
 											</label>
 										</div>
-									</div>
-									<div class="col-sm-6">
 										<div class="checkbox">
 											<label for="PFSHgbs">
 												<input type="checkbox" value="" id="PFSHgbs">Gastric bypass surgery?
@@ -386,9 +384,56 @@ $return = true;
 											</label>
 										</div>
 										<div class="checkbox">
+											<label for="PFSHeartubes">
+												<input type="checkbox" value="" id="PFSHeartubes">Ear tubes?
+											</label>
+										</div>
+										<div class="checkbox">
 											<label for="PFSHread">
 												<input type="checkbox" value="" id="PFSHread">Learned to read at normal age?
 												<input type="text" value="" class="form-control" name="PFSHreadElaboration" placeholder="Please Elaborate">
+											</label>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="checkbox">
+											<label for="PFSHmoved">
+												<input type="checkbox" value="" id="PFSHmoved">Moved around a lot?
+											</label>
+										</div>
+										<div class="checkbox">
+											<label for="PFSHfatherpresent">
+												<input type="checkbox" value="" id="PFSHfatherpresent">Was your father present in your life?
+											</label>
+										</div>
+										<div class="checkbox">
+											<label for="PFSHpmsabuse">
+												<input type="checkbox" value="" id="PFSHpmsabuse">Did you suffer physical, mental, or sexual abuse as a child?
+											</label>
+										</div>
+										<div class="checkbox">
+											<label for="PFSHbullied">
+												<input type="checkbox" value="" id="PFSHbullied">Were you bullied?
+											</label>
+										</div>
+										<div class="checkbox">
+											<label for="PFSHhumiliation">
+												<input type="checkbox" value="" id="PFSHhumiliation">Did you suffer any public humiliation?
+											</label>
+										</div>
+										<div class="checkbox">
+											<label for="PFSHothersthink">
+												<input type="checkbox" value="" id="PFSHothersthink">Do people tell you that you don’t think things through?
+											</label>
+										</div>
+										<div class="checkbox">
+											<label for="PFSHyouthink">
+												<input type="checkbox" value="" id="PFSHyouthink">Do you think you don’t think things through?
+											</label>
+										</div>
+										<div class="checkbox">
+											<label for="PFSHinfection">
+												<input type="checkbox" value="" id="PFSHinfection">Viral or bacterial infection as a child that changed your personality in any way?
 											</label>
 										</div>
 									</div>
