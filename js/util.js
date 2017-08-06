@@ -55,16 +55,16 @@ $(document).ready(function(){
 	
 	// When clicking ROS Singles, the "Other" fields on any system, PFSH speech/physical therapy, or Learned to read fields dynamically add a text box for elaboration
 	$("#PFSHform").on('change', 'input[type=checkbox]#PFSHtherapy', genericAddTextField);
-	$("#PFSHform").on('change', 'input[type=checkbox]#PFSHread', {inverse: true},genericAddTextField);
+	$("#PFSHform").on('change', 'input[type=checkbox]#PFSHread', {inverse: true}, genericAddTextField);
 	$("#ROSform").on('change', 'input[type=checkbox].ROSother', genericAddTextField);
 	$("#ROSform").on('change', 'section.ROSsingles input[type=checkbox]', genericAddTextField);
-	$("#PEform").on('change', 'input[type=checkbox]#PEgagroom', {inverse: true, defaultText: "Inappropriately groomed and/or dressed - Please Elaborate"},genericAddTextField);
-	$("#PEform").on('change', 'input[type=checkbox]#PEganourish', {inverse: true, defaultText: "Pt. has nutritional deficiencies. - Please Elaborate"},genericAddTextField);
-	$("#PEform").on('change', 'input[type=checkbox]#PEgadevel', {inverse: true, defaultText: "Has deformities relevant to mental status - Please Elaborate"},genericAddTextField);
-	$("#PEform").on('change', 'input[type=checkbox]#PEAOx3', {inverse: true},genericAddTextField);
-	$("#PEform").on('change', 'input[type=checkbox]#PElanguage', {inverse: true},genericAddTextField);
-	$("#PEform").on('change', 'input[type=checkbox]#PEknowledge', {inverse: true},genericAddTextField);
-	$("#PEform").on('change', 'input[type=checkbox]#PEgait', {inverse: true},genericAddTextField);
+	$("#PEform").on('change', 'input[type=checkbox]#PEgagroom', {inverse: true, defaultText: "Inappropriately groomed and/or dressed - Please Elaborate"}, genericAddTextField);
+	$("#PEform").on('change', 'input[type=checkbox]#PEganourish', {inverse: true, defaultText: "Pt. has nutritional deficiencies. - Please Elaborate"}, genericAddTextField);
+	$("#PEform").on('change', 'input[type=checkbox]#PEgadevel', {inverse: true, defaultText: "Has deformities relevant to mental status - Please Elaborate"}, genericAddTextField);
+	$("#PEform").on('change', 'input[type=checkbox]#PEAOx3', {inverse: true}, genericAddTextField);
+	$("#PEform").on('change', 'input[type=checkbox]#PElanguage', {inverse: true}, genericAddTextField);
+	$("#PEform").on('change', 'input[type=checkbox]#PEknowledge', {inverse: true}, genericAddTextField);
+	$("#PEform").on('change', 'input[type=checkbox]#PEgait', {inverse: true}, genericAddTextField);
 });
 
 function calculateMDM() {
