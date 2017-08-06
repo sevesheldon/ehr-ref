@@ -185,23 +185,61 @@ $return = true;
 							</div>
 						</section>
 						
-						<section id="MDMrisk" class="text-center clearfix">
-							<h2>Risk to Patient</h2>
-							<p class="text-danger">Choose one from the list below. If more than one applies, choose the one that is higher in the list.</p>
-							<div class="col-sm-4 col-sm-offset-4">
-								<select id="MDMriskmenu" class="form-control">
-									<option disabled selected>Select from dropdown list</option>
-									<option value="mod">Stopping, starting, or changing Rx (other than LiCo)</option>
-									<option value="high">Drug therapy requiring intensive monitoring for toxicity</option>
-									<option value="low">Having only 1 well-controlled chronic illness</option>
-									<option value="mod">Having 1+ worsening chronic illness</option>
-									<option value="mod">Having 2+ well-controlled chronic illnesses</option>
-									<option value="mod">A new problem with uncertain diagnosis</option>
-									<option value="high">Severe exacerbation of chronic illness</option>
-									<option value="high">Acute symptoms with potential threat to self or others</option>
-									<option value="high">An abrupt change in neurologic status</option>
-									<option value="min">Having only one minor (self-limiting) problem</option>
-								</select>
+						<section id="MDMrisk" class="clearfix">
+							<h2 class="text-center">Risk to Patient</h2>
+							<div class="col-sm-5 col-sm-offset-4">
+								<div id="MDMriskmenu">
+									<div class="checkbox">
+										<label for="MDMriskrx">
+											<input type="checkbox" value="mod" id="MDMriskrx">Stopping, starting, or changing Rx (other than LiCo)
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="MDMriskdrugtherapy">
+											<input type="checkbox" value="high" id="MDMriskdrugtherapy">Drug therapy requiring intensive monitoring for toxicity
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="MDMrisk1chronic">
+											<input type="checkbox" value="low" id="MDMrisk1chronic">Having only 1 well-controlled chronic illness
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="MDMrisk1worsechronic">
+											<input type="checkbox" value="mod" id="MDMrisk1worsechronic">Having 1+ worsening chronic illness
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="MDMrisk2controlledchronic">
+											<input type="checkbox" value="mod" id="MDMrisk2controlledchronic">Having 2+ well-controlled chronic illnesses
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="MDMrisknewproblem">
+											<input type="checkbox" value="mod" id="MDMrisknewproblem">A new problem with uncertain diagnosis
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="MDMriskexacerbationofchronic">
+											<input type="checkbox" value="high" id="MDMriskexacerbationofchronic">Severe exacerbation of chronic illness
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="MDMriskselfthreat">
+											<input type="checkbox" value="high" id="MDMriskselfthreat">Acute symptoms with potential threat to self or others
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="MDMriskneurochange">
+											<input type="checkbox" value="high" id="MDMriskneurochange">An abrupt change in neurologic status
+										</label>
+									</div>
+									<div class="checkbox">
+										<label for="MDMrisk1minor">
+											<input type="checkbox" value="min" id="MDMrisk1minor">Having only one minor (self-limiting) problem
+										</label>
+									</div>
+								</div>
 							</div>
 						</section>
 						
@@ -438,6 +476,7 @@ $return = true;
 										</div>
 									</div>
 								</div>
+								<div class="row">&nbsp;</div>
 								<div class="row">
 									<div class="col-sm-8 col-sm-offset-2">
 										<label for="PFSHeducation" class="col-sm-5 control-label">Furthest educational level</label>

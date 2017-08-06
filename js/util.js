@@ -75,7 +75,7 @@ function calculateMDM() {
 	var MDMresults = { 1:"Straightforward", 2:"Low", 3:"Moderate", 4:"High" };
 	var MDMcodes = { "Straightforward":[99212,99201,99202], "Low":[99213,99203], "Moderate":[99214,99204], "High":[99215,99205] };
 	var MDMrisk = { "min":1, "low":2, "mod":3, "high":4 };
-	var problem_types = {}, problem_points = 0, data_points = 0, mdm = '', problem_result = ''; data_result = '';
+	var problem_types = {}, problem_points = 0, data_points = 0, mdm = '', problem_result = ''; data_result = '', risk_result=0;
 	
 	for (var key in MDMproblems) {
 		if (MDMproblems.hasOwnProperty(key)) {
@@ -102,7 +102,11 @@ function calculateMDM() {
 		}
 	}
 	
-	var risk_result = ($("#MDMform #MDMriskmenu").val()) ? MDMrisk[$("#MDMform #MDMriskmenu").val()] : 1;
+	$("#MDMform #MDMriskmenu input[type='checkbox']").each(function() {
+		if ($(this).is(':checked')) {
+			risk_result = (MDMrisk[$(this).val()] > risk_result) ? MDMrisk[$(this).val()] : risk_result;
+		}
+	});
 
 	switch (true) {
 		case (problem_points <= 1):
@@ -158,7 +162,11 @@ function calculateMDM() {
 	}
 	
 	$("#devinfo").empty();
-	switch($("#MDMform #MDMriskmenu").val()) { case "min": devrisk = "Minimal"; break; case "low": devrisk = "Low"; break; case "mod": devrisk = "Moderate"; break; case "high": devrisk = "High"; break; default: devrisk = "Minimal"; break; }
+	for (k in MDMrisk) {
+		if (MDMrisk[k] === risk_result) {
+		  switch(k) { case "min": devrisk = "Minimal"; break; case "low": devrisk = "Low"; break; case "mod": devrisk = "Moderate"; break; case "high": devrisk = "High"; break; default: devrisk = "Minimal"; break; }
+		}
+	}
 	$("#devinfo").append(
 		"<h4 style=\"font-weight: bold;\">#####Dev Info Only#####</h4> \
 		<h4 style=\"font-weight: bold;\">MDM Calculator Results</h4> \
