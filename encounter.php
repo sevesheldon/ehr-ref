@@ -363,7 +363,7 @@ $return = true;
 										</div>
 										<div class="checkbox">
 											<label for="PFSHcsection">
-												<input type="checkbox" value="" id="PFSHcsection">C-section birth?
+												<input type="checkbox" value="" id="PFSHcsection">Birth by C-section?
 											</label>
 										</div>
 										<div class="checkbox">
