@@ -427,8 +427,8 @@ $return = true;
 									</label>
 								</div>
 								<div class="checkbox">
-									<label for="ROSsi">
-										<input type="checkbox" value="" id="ROSsi">SI
+									<label for="ROSsihi">
+										<input type="checkbox" value="" id="ROSsihi">SI/HI
 									</label>
 								</div>
 								<div class="checkbox">
@@ -444,6 +444,21 @@ $return = true;
 								<div class="checkbox">
 									<label for="ROSdaabuse">
 										<input type="checkbox" value="" id="ROSdaabuse">Drug/Alcohol Abuse
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="ROSdel">
+										<input type="checkbox" value="" id="ROSdel">Delusions
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="ROSobs">
+										<input type="checkbox" value="" id="ROSobs">Obsessions
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="ROSrum">
+										<input type="checkbox" value="" id="ROSrum">Aggressive/Violent Ruminations
 									</label>
 								</div>
 								<div class="checkbox">
@@ -914,40 +929,6 @@ $return = true;
 									</div>
 									<div class="form-group col-sm-5">
 										<input type="checkbox" value="" id="PEassoc">
-									</div>
-								</div>
-								
-								<div class="row">
-									<div class="col-sm-7 text-right">
-										<h4>Risk factors/<br>psychotic thoughts:</h4>
-										<p>(check all that apply)</p>
-									</div>
-									<div class="form-group col-sm-5">
-										<div class="checkbox">
-											<label for="PEsihi">
-												<input type="checkbox" value="" id="PEsihi">SI/HI
-											</label>
-										</div>
-										<div class="checkbox">
-											<label for="PEhall">
-												<input type="checkbox" value="" id="PEhall">Hallucinations
-											</label>
-										</div>
-										<div class="checkbox">
-											<label for="PEdel">
-												<input type="checkbox" value="" id="PEdel">Delusions
-											</label>
-										</div>
-										<div class="checkbox">
-											<label for="PEobs">
-												<input type="checkbox" value="" id="PEobs">Obsessions
-											</label>
-										</div>
-										<div class="checkbox">
-											<label for="PErum">
-												<input type="checkbox" value="" id="PErum">Aggressive/Violent<br>Ruminations
-											</label>
-										</div>
 									</div>
 								</div>
 						</section>
