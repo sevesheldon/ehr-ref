@@ -785,7 +785,7 @@ $return = true;
 									</div>
 								</div>
 							
-								<div class="row" id="PEgadevelrow">
+								<div class="row">
 									<div class="col-sm-4 text-right">
 										<label for="PEgadevel">Well-developed</label>
 									</div>
@@ -960,7 +960,7 @@ $return = true;
 						<section class="clearfix PEsingles">
 							<div class="row">
 								<div class="col-sm-5 text-right">
-									<label for="PEji"><h4>Judgement and insight intact</label>
+									<label for="PEji" class="h4">Judgement and insight intact</label>
 								</div>
 								<div class="form-group col-sm-7">
 									<div class="checkbox">
@@ -970,12 +970,47 @@ $return = true;
 							</div>
 							<div class="row">
 								<div class="col-sm-5 text-right">
-									<label for="PEAOx3" class="h4">Alert &amp; Oriented x3</label>
+									<h4>Alert &amp; Oriented:</h4>
 								</div>
-								<div class="form-group col-sm-7">
-									<div class="checkbox">
-										<input type="checkbox" value="" id="PEAOx3">
-										<input type="text" value="" class="form-control" name="PEAOx3Elaboration" placeholder="Please Elaborate">
+								<div class="col-sm-7">
+									<div class="row">
+										<div class="col-sm-2">
+											<div class="text-right">
+												<label for="PEAOname" class="h4">Name</label>
+											</div>
+										</div>
+										<div class="form-group col-sm-10">
+											<div class="checkbox">
+												<input type="checkbox" value="" id="PEAOname">
+												<input type="text" value="" class="form-control" name="PEAOnameElaboration" placeholder="Please Elaborate">
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-2">
+											<div class="text-right">
+												<label for="PEAOplace" class="h4">Place</label>
+											</div>
+										</div>
+										<div class="form-group col-sm-10">
+											<div class="checkbox">
+												<input type="checkbox" value="" id="PEAOplace">
+												<input type="text" value="" class="form-control" name="PEAOplaceElaboration" placeholder="Please Elaborate">
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-2">
+											<div class="text-right">
+												<label for="PEAOdate" class="h4">Date</label>
+											</div>
+										</div>
+										<div class="form-group col-sm-10">
+											<div class="checkbox">
+												<input type="checkbox" value="" id="PEAOdate">
+												<input type="text" value="" class="form-control" name="PEAOdateElaboration" placeholder="Please Elaborate">
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -1033,7 +1068,7 @@ $return = true;
 								</div>
 							</div>
 							
-							<div class="row">
+							<div class="row" id="PEMoodrow">
 								<label for="PEmood" class="col-sm-3 control-label text-right h4">Mood is:</label>
 								<div class="col-sm-9">
 									<input type="text" value="" id="PEmood" class="form-control">

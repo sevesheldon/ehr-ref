@@ -61,7 +61,9 @@ $(document).ready(function(){
 	$("#PEform").on('change', 'input[type=checkbox]#PEgagroom', {inverse: true, defaultText: "Inappropriately groomed and/or dressed - Please Elaborate"}, genericAddTextField);
 	$("#PEform").on('change', 'input[type=checkbox]#PEganourish', {inverse: true, defaultText: "Pt. has nutritional deficiencies. - Please Elaborate"}, genericAddTextField);
 	$("#PEform").on('change', 'input[type=checkbox]#PEgadevel', {inverse: true, defaultText: "Has deformities relevant to mental status - Please Elaborate"}, genericAddTextField);
-	$("#PEform").on('change', 'input[type=checkbox]#PEAOx3', {inverse: true}, genericAddTextField);
+	$("#PEform").on('change', 'input[type=checkbox]#PEAOname', {inverse: true}, genericAddTextField);
+	$("#PEform").on('change', 'input[type=checkbox]#PEAOplace', {inverse: true}, genericAddTextField);
+	$("#PEform").on('change', 'input[type=checkbox]#PEAOdate', {inverse: true}, genericAddTextField);
 	$("#PEform").on('change', 'input[type=checkbox]#PElanguage', {inverse: true}, genericAddTextField);
 	$("#PEform").on('change', 'input[type=checkbox]#PEknowledge', {inverse: true}, genericAddTextField);
 	$("#PEform").on('change', 'input[type=checkbox]#PEgait', {inverse: true}, genericAddTextField);
