@@ -109,7 +109,10 @@ function calculateMDM() {
 	});
 
 	switch (true) {
-		case (problem_points <= 1):
+		case (problem_points < 1):
+			problem_result = 0;
+			break;
+		case (problem_points == 1):
 			problem_result = 1;
 			break;
 		case (problem_points == 2):
@@ -124,7 +127,10 @@ function calculateMDM() {
 	}
 
 	switch (true) {
-		case (data_points <= 1):
+		case (data_points < 1):
+			data_result = 0;
+			break;
+		case (data_points == 1):
 			data_result = 1;
 			break;
 		case (data_points == 2):
@@ -148,34 +154,42 @@ function calculateMDM() {
 		mdm = MDMresults[results[1]];
 	}
 	
-	$("#MDMresult div.row:first").empty();
-	$("#MDMresult div.row #MDM").empty();
-	$("#MDMresult div.row #mdm-codes").empty();
-	
-	$("#MDMresult").addClass("alert-success");
-	$("#MDMresult div.row:first").append("<h2>Select Billing Code</h2>");
-	$("#MDMresult div.row #MDM").append("<h3>MDM:</h3>");
-	$("#MDMresult div.row #MDM").append("<span class=\"h3\">" + mdm + "</span>");
-	
-	for (code in MDMcodes[mdm]) {
-		$("#MDMresult div.row #mdm-codes").append("<button type=\"button\" class=\"select-code btn btn-primary btn-lg\" value=\"" + MDMcodes[mdm][code] + "\">" + MDMcodes[mdm][code] + "</button>");
-	}
-	
-	$("#devinfo").empty();
-	for (k in MDMrisk) {
-		if (MDMrisk[k] === risk_result) {
-		  switch(k) { case "min": devrisk = "Minimal"; break; case "low": devrisk = "Low"; break; case "mod": devrisk = "Moderate"; break; case "high": devrisk = "High"; break; default: devrisk = "Minimal"; break; }
+	if (problem_result > 0 && data_result > 0 && risk_result > 0) {
+		$("#MDMresult div.row:first").empty();
+		$("#MDMresult div.row #MDM").empty();
+		$("#MDMresult div.row #mdm-codes").empty();
+		
+		$("#MDMresult").addClass("alert-success");
+		$("#MDMresult div.row:first").append("<h2>Select Billing Code</h2>");
+		$("#MDMresult div.row #MDM").append("<h3>MDM:</h3>");
+		$("#MDMresult div.row #MDM").append("<span class=\"h3\">" + mdm + "</span>");
+		
+		for (code in MDMcodes[mdm]) {
+			$("#MDMresult div.row #mdm-codes").append("<button type=\"button\" class=\"select-code btn btn-primary btn-lg\" value=\"" + MDMcodes[mdm][code] + "\">" + MDMcodes[mdm][code] + "</button>");
 		}
+		
+		$("#devinfo").empty();
+		for (k in MDMrisk) {
+			if (MDMrisk[k] === risk_result) {
+			  switch(k) { case "min": devrisk = "Minimal"; break; case "low": devrisk = "Low"; break; case "mod": devrisk = "Moderate"; break; case "high": devrisk = "High"; break; default: devrisk = "Minimal"; break; }
+			}
+		}
+		$("#devinfo").append(
+			"<h4 style=\"font-weight: bold;\">#####Dev Info Only#####</h4> \
+			<h4 style=\"font-weight: bold;\">MDM Calculator Results</h4> \
+			<ul class=\"list-unstyled\"> \
+			<li style=\"font-size: 18px;\">Problem Points: " + problem_result + "</li> \
+			<li style=\"font-size: 18px;\">Data Points: " + data_result + "</li> \
+			<li style=\"font-size: 18px;\">Risk to patient: " + devrisk + "</li> \
+			</ul>"		
+		);
+	} else {
+		$("#MDMresult div.row:first").empty();
+		$("#MDMresult div.row #MDM").empty();
+		$("#MDMresult div.row #mdm-codes").empty();
+		$("#devinfo").empty();
+		$("#MDMresult").removeClass("alert-success");
 	}
-	$("#devinfo").append(
-		"<h4 style=\"font-weight: bold;\">#####Dev Info Only#####</h4> \
-		<h4 style=\"font-weight: bold;\">MDM Calculator Results</h4> \
-		<ul class=\"list-unstyled\"> \
-		<li style=\"font-size: 18px;\">Problem Points: " + problem_result + "</li> \
-		<li style=\"font-size: 18px;\">Data Points: " + data_result + "</li> \
-		<li style=\"font-size: 18px;\">Risk to patient: " + devrisk + "</li> \
-		</ul>"		
-	);
 }
 
 function genericAddTextField(event) {
