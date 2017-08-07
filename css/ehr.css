@@ -80,11 +80,6 @@ input[type=checkbox] {
 	width: 105px;
 }
 
-
-.form-group .checkbox label {
-	width: 100%;
-}
-
 #PFSHform #PFSHtherapy + input {
     margin-top: 5px;
 }

@@ -74,7 +74,7 @@ $return = true;
 									<div class="form-group col-sm-7">
 										<input type="text" value="" class="form-control MDMminprob" name="MDMminprob[]">
 									</div>
-									<div clas="col-sm-1">
+									<div>
 										<button type="button" class="add-row btn btn-default alert-success">
 											<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 										</button>
@@ -91,7 +91,7 @@ $return = true;
 									<div class="form-group col-sm-7">
 										<input type="text" value="" class="form-control MDMstabprob" name="MDMstabprob[]">
 									</div>
-									<div clas="col-sm-1">
+									<div>
 										<button type="button" class="add-row btn btn-default alert-success">
 											<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 										</button>
@@ -108,7 +108,7 @@ $return = true;
 									<div class="form-group col-sm-7">
 										<input type="text" value="" class="form-control MDMworseprob" name="MDMworseprob[]">
 									</div>
-									<div clas="col-sm-1">
+									<div>
 										<button type="button" class="add-row btn btn-default alert-success">
 											<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 										</button>
@@ -134,7 +134,7 @@ $return = true;
 									<div class="form-group col-sm-7">
 										<input type="text" value="" class="form-control MDMnewprobyes" name="MDMnewprobyes[]">
 									</div>
-									<div clas="col-sm-1">
+									<div>
 										<button type="button" class="add-row btn btn-default alert-success">
 											<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 										</button>
@@ -546,9 +546,11 @@ $return = true;
 									</label>
 								</div>
 								<div class="checkbox">
-									<label for="ROSpsychother1">
-										<input type="checkbox" value="" id="ROSpsychother1" class="ROSother">Other
-									</label>
+									<div>
+										<label for="ROSpsychother1">
+											<input type="checkbox" value="" id="ROSpsychother1" class="ROSother">Other
+										</label>
+									</div>
 								</div>
 							</div>
 							<div class="col-sm-2">

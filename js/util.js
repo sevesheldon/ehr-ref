@@ -56,7 +56,7 @@ $(document).ready(function(){
 	// When clicking ROS Singles, the "Other" fields on any system, PFSH speech/physical therapy, or Learned to read fields dynamically add a text box for elaboration
 	$("#PFSHform").on('change', 'input[type=checkbox]#PFSHtherapy', genericAddTextField);
 	$("#PFSHform").on('change', 'input[type=checkbox]#PFSHread', {inverse: true}, genericAddTextField);
-	$("#ROSform").on('change', 'input[type=checkbox].ROSother', genericAddTextField);
+	$("#ROSform").on('change', 'input[type=checkbox].ROSother', {addButtons: true}, genericAddTextField);
 	$("#ROSform").on('change', 'section.ROSsingles input[type=checkbox]', genericAddTextField);
 	$("#PEform").on('change', 'input[type=checkbox]#PEgagroom', {inverse: true, defaultText: "Inappropriately groomed and/or dressed - Please Elaborate"}, genericAddTextField);
 	$("#PEform").on('change', 'input[type=checkbox]#PEganourish', {inverse: true, defaultText: "Pt. has nutritional deficiencies. - Please Elaborate"}, genericAddTextField);
@@ -195,6 +195,7 @@ function calculateMDM() {
 function genericAddTextField(event) {
 	$inverse = false;
 	$defaultText = "Please Elaborate";
+	$addButtons = false;
 	
 	if(typeof(event.data) != "undefined" && event.data !== null) {
 		if(typeof(event.data.inverse) != "undefined" && event.data.inverse !== null) {
@@ -204,14 +205,32 @@ function genericAddTextField(event) {
 		if(typeof(event.data.defaultText) != "undefined" && event.data.defaultText !== null) {
 			$defaultText = event.data.defaultText;
 		}
+		
+		if(typeof(event.data.addButtons) != "undefined" && event.data.addButtons !== null) {
+			$addButtons = event.data.addButtons;
+		}
 	}
 	
 	$parent = $(this).parent();
 	$id = $(this).attr('id');
 	if (($(this).is(':checked') && !$inverse) || (!$(this).is(':checked') && $inverse)) {
 		$parent.append("<input type=\"text\" value=\"\" class=\"form-control\" name=\"" + $id + "Elaboration\" placeholder=\"" + $defaultText + "\">");
+		if ($addButtons) {
+			$parent.parent().append("<button type=\"button\" class=\"add-row btn btn-default alert-success\" style=\"margin-top: 12px;\"> \
+											<span class=\"glyphicon glyphicon-plus\" aria-hidden=\"true\"></span> \
+										</button> \
+										<button type=\"button\" class=\"remove-row btn btn-default alert-danger\" style=\"margin-top: 12px;\"> \
+											<span class=\"glyphicon glyphicon-minus\" aria-hidden=\"true\"></span> \
+										</button>");
+			$parent.parent().css("margin-top", "-12px");
+			$parent.parent().parent().css("margin-bottom", "17px");
+			
+		}
 		$("input + input", $parent).focus();
 	} else {
 		$("input + input", $parent).remove();
+		$("button", $parent.parent()).remove();
+		$parent.parent().css("margin-top", "inherit");
+			$parent.parent().parent().css("margin-bottom", "5px");
 	}
 }
