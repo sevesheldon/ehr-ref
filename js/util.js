@@ -222,8 +222,8 @@ function genericAddTextField(event) {
 										<button type=\"button\" class=\"remove-row btn btn-default alert-danger\" style=\"margin-top: 12px;\"> \
 											<span class=\"glyphicon glyphicon-minus\" aria-hidden=\"true\"></span> \
 										</button>");
-			$parent.parent().css("margin-top", "-12px");
-			$parent.parent().parent().css("margin-bottom", "17px");
+			//$parent.parent().css("margin-top", "-12px");
+			//$parent.parent().parent().css("margin-bottom", "17px");
 			
 		}
 		$("input + input", $parent).focus();
