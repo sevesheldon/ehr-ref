@@ -2,6 +2,20 @@ $(document).ready(function(){
 	// When any MDM form element is updated, calculate the MDM based on the current element values
 	$('body').on('change', "#MDMform", calculateMDM);
 	
+	$("#ROSform").on('click', 'button.add-row', function() {
+		var $parentSection = $(this).closest('div.form-group');
+		var $lastRow = $("div.checkbox:last", $parentSection);
+		$lastRow.after($lastRow.clone());
+		var $newRow = $("div.checkbox:last", $parentSection);
+		$("div.checkbox:last input[type='text']", $parentSection).each(function() {
+			$(this).val('');
+			$(this).removeAttr("value");
+		});
+		$("label", $newRow).prop("for").replace(/#\d*/, "#" + $("input.ROSother", $parentSection).length);
+		$("input.ROSother", $newRow).prop("id").replace(/#\d*/, "#" + $("input.ROSother", $parentSection).length);
+		$("input", $newRow).focus();
+	});
+	
 	// Add a new input row to the form based on the button pressed
 	$("#MDMform").on('click', 'button.add-row', function() {
 		var $parentSection = $(this).closest('section');
