@@ -69,6 +69,7 @@ input[type=checkbox] {
 .target-section,
 .history-section,
 .exam-section,
+.psychotherapy-section,
 .mdm-section {
     /*height: 50%;*/
     padding-top: 50px;

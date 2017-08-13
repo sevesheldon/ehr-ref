@@ -31,6 +31,9 @@
                         <a class="page-scroll" href="#exam">Physical Exam</a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="#psychotherapy">Psychotherapy</a>
+                    </li>
+                    <li>
                         <a href="logout.php">Logout</a>
                     </li>
                 </ul>

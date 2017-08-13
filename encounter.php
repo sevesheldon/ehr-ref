@@ -1150,6 +1150,79 @@ $return = true;
         </div>
     </section>
 
+	<section id="psychotherapy" class="psychotherapy-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="text-center">Psychotherapy</h1>
+					<form id="PsychAddonform">
+						<div class="col-sm-6 text-center">
+							<h4>How many minutes of psychotherapy were performed during the encounter, not including E/M?</h4>
+							<div class="col-sm-6 col-sm-offset-3 text-left">
+								<div class="radio">
+									<label for="psychunder16">
+										<input type="radio" name="pyschminutes" id="psychunder16" value=""> &lt;16 minutes (not billable)
+									</label>
+								</div>
+								<div class="radio">
+									<label for="psych1637">
+										<input type="radio" name="pyschminutes" id="psych1637" value="At least 16 minutes were spent on psychotherapy today, above and beyond the time spent on the E/M service."> 16-37 minutes
+									</label>
+								</div>
+								<div class="radio">
+									<label for="psych3852">
+										<input type="radio" name="pyschminutes" id="psych3852" value="At least 38 minutes were spent on psychotherapy today, above and beyond the time spent on the E/M service."> 38-52 minutes
+									</label>
+								</div>
+								<div class="radio">
+									<label for="psych5360">
+										<input type="radio" name="pyschminutes" id="psych5360" value="At least 53 minutes were spent on psychotherapy today, above and beyond the time spent on the E/M service."> 53-60 minutes
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 text-center">
+							<h4 class="text-center">What type of psychotherapy was performed?</h4>
+							<div class="col-sm-6 col-sm-offset-3 text-left">
+								<div class="checkbox">
+									<label for="PsychCBT">
+										<input type="checkbox" value="" id="PsychCBT">CBT and review of CBT homework
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="Psychinter">
+										<input type="checkbox" value="" id="Psychinter">Interpersonal Therapy
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="Psychtraining">
+										<input type="checkbox" value="" id="Psychtraining">Training on automatic thoughts
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="PsychSIeval">
+										<input type="checkbox" value="" id="PsychSIeval">Evaluation for SI
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="Psychratings">
+										<input type="checkbox" value="" id="Psychratings">Symptom ratings scales
+									</label>
+								</div>
+								<div class="checkbox">
+									<label for="Psychother1">
+										<input type="checkbox" value="" id="Psychother1">Other
+									</label>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+					
+					
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
