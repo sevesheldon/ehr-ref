@@ -2,6 +2,7 @@ $(document).ready(function(){
 	// When any MDM form element is updated, calculate the MDM based on the current element values
 	$('body').on('change', "#MDMform", calculateMDM);
 	
+	// Add a new 'ROS Other' row based on the button pressed
 	$("#ROSform").on('click', 'button.add-row', function() {
 		var $parentSection = $(this).closest('div.form-group');
 		var $lastRow = $("div.checkbox:last", $parentSection);
@@ -11,12 +12,35 @@ $(document).ready(function(){
 			$(this).val('');
 			$(this).removeAttr("value");
 		});
-		$("label", $newRow).prop("for").replace(/#\d*/, "#" + $("input.ROSother", $parentSection).length);
-		$("input.ROSother", $newRow).prop("id").replace(/#\d*/, "#" + $("input.ROSother", $parentSection).length);
+		$oldLabel = $("label", $newRow).prop("for");
+		$newLabel = $oldLabel.replace(/other\d*/, "other" + $("input.ROSother", $parentSection).length);
+		$re = new RegExp($oldLabel);
+		
+		$("label", $newRow).prop("for",$newLabel);
+		$("input.ROSother", $newRow).attr("id",$newLabel);
+		$("input[type='text']", $newRow).prop("name", $("input[type='text']", $newRow).prop("name").replace($re, $newLabel));
 		$("input", $newRow).focus();
 	});
 	
-	// Add a new input row to the form based on the button pressed
+	// Remove the input row from the form corresponding to the button pressed
+	$("#ROSform").on('click', 'button.remove-row', function() {
+		var $i = 1;
+		if ($("div.checkbox input.ROSother", $(this).closest('div.form-group')).length>1) {
+			var $parentSection = $(this).closest('div.form-group');
+			$(this).closest('div.checkbox').remove();
+			$("div.checkbox input.ROSother", $parentSection).each(function() {
+				$re = new RegExp(/other\d*/);
+				$newLabel = "other" + $i;
+				
+				$(this).attr("id",$(this).attr("id").replace($re, $newLabel));
+				$(this).closest("label").prop("for",$(this).closest("label").prop("for").replace($re, $newLabel));
+				$(this).next("input[type='text']").prop("name", $(this).next("input[type='text']").prop("name").replace($re, $newLabel));
+				$i++;
+			});
+		}
+	});
+	
+	// Add a new input row to the MDM form based on the button pressed
 	$("#MDMform").on('click', 'button.add-row', function() {
 		var $parentSection = $(this).closest('section');
 		var $lastRow = $("div.row:last", $parentSection);
