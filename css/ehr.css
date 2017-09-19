@@ -130,7 +130,8 @@ input[type=checkbox] {
 	margin-left: 18px;
 }
 
-#ROSform .ROSother + input {
+#ROSform .ROSother + input,
+#PsychAddonform .PTother + input {
 	width: 80%;
     margin-left: 5px;
     display: inline-block;

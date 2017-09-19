@@ -1183,7 +1183,7 @@ $return = true;
 						</div>
 						<div class="col-sm-6 text-center">
 							<h4 class="text-center">What type of psychotherapy was performed?</h4>
-							<div class="col-sm-6 col-sm-offset-3 text-left">
+							<div class="col-sm-10 col-sm-offset-1 text-left form-group">
 								<div class="checkbox">
 									<label for="PsychCBT">
 										<input type="checkbox" value="" id="PsychCBT">CBT and review of CBT homework
@@ -1211,7 +1211,7 @@ $return = true;
 								</div>
 								<div class="checkbox">
 									<label for="Psychother1">
-										<input type="checkbox" value="" id="Psychother1">Other
+										<input type="checkbox" value="" id="Psychother1" class="PTother">Other
 									</label>
 								</div>
 							</div>

@@ -70,6 +70,45 @@ $(document).ready(function(){
 		}
 	});
 	
+	// Add a new 'Psychotherapy Other' row based on the button pressed
+	$("#PsychAddonform").on('click', 'button.add-row', function() {
+		var $parentSection = $(this).closest('div.form-group');
+		var $lastRow = $("div.checkbox:last", $parentSection);
+		$lastRow.after($lastRow.clone());
+		var $newRow = $("div.checkbox:last", $parentSection);
+		$("div.checkbox:last input[type='text']", $parentSection).each(function() {
+			$(this).val('');
+			$(this).removeAttr("value");
+		});
+		$oldLabel = $("label", $newRow).prop("for");
+		$newLabel = $oldLabel.replace(/other\d*/, "other" + $("input.PTother", $parentSection).length);
+		$re = new RegExp($oldLabel);
+		
+		$("label", $newRow).prop("for",$newLabel);
+		$("input.PTother", $newRow).attr("id",$newLabel);
+		$("input[type='text']", $newRow).prop("name", $("input[type='text']", $newRow).prop("name").replace($re, $newLabel));
+		$("input", $newRow).focus();
+	});
+	
+	// Remove the input row from the form corresponding to the button pressed
+	$("#PsychAddonform").on('click', 'button.remove-row', function() {
+		var $i = 1;
+		if ($("div.checkbox input.PTother", $(this).closest('div.form-group')).length>1) {
+			var $parentSection = $(this).closest('div.form-group');
+			$(this).closest('div.checkbox').remove();
+			$("div.checkbox input.PTother", $parentSection).each(function() {
+				$re = new RegExp(/other\d*/);
+				$newLabel = "other" + $i;
+				
+				$(this).attr("id",$(this).attr("id").replace($re, $newLabel));
+				$(this).closest("label").prop("for",$(this).closest("label").prop("for").replace($re, $newLabel));
+				$(this).next("input[type='text']").prop("name", $(this).next("input[type='text']").prop("name").replace($re, $newLabel));
+				$i++;
+			});
+		}
+	});
+	
+	
 	// When a billing code is selected, place the value in the "Target Code" box and apply some styles
 	$("#MDMform").on('click', '#mdm-codes button.select-code', function() {
 		$("#targetcode").val($(this).val());
@@ -105,6 +144,7 @@ $(document).ready(function(){
 	$("#PEform").on('change', 'input[type=checkbox]#PElanguage', {inverse: true}, genericAddTextField);
 	$("#PEform").on('change', 'input[type=checkbox]#PEknowledge', {inverse: true}, genericAddTextField);
 	$("#PEform").on('change', 'input[type=checkbox]#PEgait', {inverse: true}, genericAddTextField);
+	$("#PsychAddonform").on('change', 'input[type=checkbox].PTother', {addButtons: true}, genericAddTextField);
 });
 
 function calculateMDM() {
