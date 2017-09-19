@@ -111,10 +111,14 @@ $(document).ready(function(){
 	
 	// When a billing code is selected, place the value in the "Target Code" box and apply some styles
 	$("#MDMform").on('click', '#mdm-codes button.select-code', function() {
-		$("#targetcode").val($(this).val());
+		$targetcode = $(this).val();
+		$("#targetcode").val($targetcode);
 		$("#targetcode").css("text-align", "center");
 		$("#targetcode").css("font-weight", "700");
-		$("#targetcode").css("font-size", "22px");
+		$("#targetcode").css("font-size", "22px");		
+		$.getScript("js/validation/" + $targetcode + ".js", function(data) {
+			$("#formValidation").append(data);
+		});
 	});
 	
 	// When a new problem with additional planned workup is entered, add a text box for the additional planned workup
@@ -128,6 +132,11 @@ $(document).ready(function(){
 		} else {
 			$("input + input", $parent).remove();
 		}
+	});
+	
+	$("#generateNotes").on('click', function() {
+		$("#HPIform").valid();
+		$("#PFSHform").valid();
 	});
 	
 	// When clicking ROS Singles, the "Other" fields on any system, PFSH speech/physical therapy, or Learned to read fields dynamically add a text box for elaboration
