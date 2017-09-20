@@ -53,6 +53,11 @@ input[type=checkbox] {
 	cursor: pointer;
 }
 
+.checkbox,
+.radio {
+	border: 1px solid transparent;
+}
+
 .checkbox + .checkbox {
 	margin-top: inherit;
 }
@@ -198,5 +203,10 @@ input[type=checkbox] {
 }
 
 .validate-alert {
+	border: 1px solid transparent;
     border-radius: 4px;
+}
+
+.alert-danger {
+	border-color: #a94442;
 }

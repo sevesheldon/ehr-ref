@@ -7,7 +7,7 @@
 				},
 				messages: {
 				},
-				errorClass: "alert-danger",
+				errorClass: "validate-alert alert-danger",
 				errorPlacement: function(error,element) {
 					return true;
 				}
@@ -42,7 +42,7 @@
 						$( element ).removeClass( errorClass ).addClass( validClass );
 					}
 				},
-				errorClass: "alert-danger"
+				errorClass: "validate-alert alert-danger"
 			});
 			
 			$("#PEform").validate({
@@ -77,7 +77,7 @@
 						$( element ).removeClass( errorClass ).addClass( validClass );
 					}
 				},
-				errorClass: "alert-danger"
+				errorClass: "validate-alert alert-danger"
 			});
 			
 			$.validator.addClassRules({
