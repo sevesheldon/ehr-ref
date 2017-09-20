@@ -838,19 +838,19 @@ $return = true;
 									<h4>Body Habitus</h4>
 								</div>
 								<div class="col-sm-6">
-									<div class="checkbox">
+									<div class="radio">
 										<label for="PEbhendo">
-											<input type="checkbox" value="" id="PEbhendo">Endomorphic
+											<input type="radio" value="Endomorphic" id="PEbhendo" name="bodyhabitus">Endomorphic
 										</label>
 									</div>
-									<div class="checkbox">
+									<div class="radio">
 										<label for="PEbhecto">
-											<input type="checkbox" value="" id="PEbhecto">Ectomorphic
+											<input type="radio" value="Ectomorphic" id="PEbhecto" name="bodyhabitus">Ectomorphic
 										</label>
 									</div>
-									<div class="checkbox">
+									<div class="radio">
 										<label for="PEbhmeso">
-											<input type="checkbox" value="" id="PEbhmeso">Mesomorphic
+											<input type="radio" value="Mesomorphic" id="PEbhmeso" name="bodyhabitus">Mesomorphic
 										</label>
 									</div>
 								</div>

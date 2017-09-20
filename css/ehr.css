@@ -103,6 +103,7 @@ input[type=checkbox] {
 }
 
 #ROSform .checkbox, 
+#PEform .radio, 
 #PEform .checkbox {
 	margin-top: 0px;
 	margin-bottom: 5px;
