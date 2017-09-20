@@ -37,6 +37,7 @@
                         <a href="logout.php">Logout</a>
                     </li>
                 </ul>
+				<button class="btn btn-danger" id="testdatabutton">Test-99205</button>
 				<button type="button" class="btn btn-primary" style="margin: 0 auto;" id="generateNotes">Generate Notes</button>
 				<div class="code-container">
 					<input type="text" class="form-control" id="targetcode" placeholder="Target Code">

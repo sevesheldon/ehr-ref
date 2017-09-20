@@ -118,6 +118,7 @@ $(document).ready(function(){
 		$("#targetcode").css("font-size", "22px");		
 		$.getScript("js/validation/" + $targetcode + ".js", function(data) {
 			$("#formValidation").append(data);
+			validateForms();
 		});
 	});
 	
@@ -134,10 +135,7 @@ $(document).ready(function(){
 		}
 	});
 	
-	$("#generateNotes").on('click', function() {
-		$("#HPIform").valid();
-		$("#PFSHform").valid();
-	});
+	$("#generateNotes").on('click', validateForms);
 	
 	// When clicking ROS Singles, the "Other" fields on any system, PFSH speech/physical therapy, or Learned to read fields dynamically add a text box for elaboration
 	$("#PFSHform").on('change', 'input[type=checkbox]#PFSHtherapy', genericAddTextField);
@@ -154,7 +152,23 @@ $(document).ready(function(){
 	$("#PEform").on('change', 'input[type=checkbox]#PEknowledge', {inverse: true}, genericAddTextField);
 	$("#PEform").on('change', 'input[type=checkbox]#PEgait', {inverse: true}, genericAddTextField);
 	$("#PsychAddonform").on('change', 'input[type=checkbox].PTother', {addButtons: true}, genericAddTextField);
+	
+	$("#testdatabutton").on('click', function() {
+		$("input[name='MDMminprob[]']").val("test");
+		$("#MDMdatadiscuss").prop('checked', true);
+		$("#MDMdatarecdec").prop('checked', true);
+		$("#MDMdatarecrev").prop('checked', true);
+		$("#MDMriskrx").prop('checked', true);
+		$("#MDMriskdrugtherapy").prop('checked', true);
+		calculateMDM();
+		$("button[value=99205]").click();
+	});
 });
+
+function validateForms() {
+	$("#HPIform").valid();
+	$("#PFSHform").valid();
+}
 
 function calculateMDM() {
 	var MDMproblems = { "MDMminprob":1, "MDMstabprob":1, "MDMworseprob":2, "MDMnewprobno":3, "MDMnewprobyes":4 };

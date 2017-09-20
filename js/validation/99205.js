@@ -7,7 +7,7 @@
 				},
 				messages: {
 				},
-				errorClass: "alert alert-danger",
+				errorClass: "alert-danger",
 				errorPlacement: function(error,element) {
 					return true;
 				}
@@ -21,10 +21,28 @@
 				},
 				messages: {
 				},
-				errorClass: "alert alert-danger",
 				errorPlacement: function(error,element) {
 					return true;
-				}
+				},
+				highlight: function( element, errorClass, validClass ) {
+					if ( element.type === "radio" ) {
+						this.findByName( element.name ).addClass( errorClass ).removeClass( validClass );
+					} else if ( element.type === "checkbox" ) {
+						$( element ).parent().parent().addClass( errorClass ).removeClass( validClass );
+					} else {
+						$( element ).addClass( errorClass ).removeClass( validClass );
+					}
+				},
+				unhighlight: function( element, errorClass, validClass ) {
+					if ( element.type === "radio" ) {
+						this.findByName( element.name ).removeClass( errorClass ).addClass( validClass );
+					} else if ( element.type === "checkbox" ) {
+						$( element ).parent().parent().removeClass( errorClass ).addClass( validClass );
+					} else {
+						$( element ).removeClass( errorClass ).addClass( validClass );
+					}
+				},
+				errorClass: "alert-danger"
 			});
 			
 			$.validator.addClassRules({
@@ -36,6 +54,6 @@
 			$.validator.addMethod(
 				"require_xof_elements",
 				$.validator.methods.require_from_group,
-				"Please fill out at least {0} HPI elements"
+				""
 			);
 		});

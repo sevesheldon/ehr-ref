@@ -836,7 +836,6 @@ $return = true;
 							<div class="form-group col-sm-5">
 								<div class="col-sm-6 text-right">
 									<h4>Body Habitus</h4>
-									<p class="text-warning"><strong>Check one (and only one) of the following</strong></p>
 								</div>
 								<div class="col-sm-6">
 									<div class="checkbox">

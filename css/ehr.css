@@ -81,7 +81,15 @@ input[type=checkbox] {
 	width: 105px;
 }
 
-#PFSHform #PFSHtherapy + input {
+#HPIform input.HPIElement,
+#PFSHform textarea.PFSHFamilyElement,
+#PFSHform input[type=text].PFSHSocialElement,
+#PFSHform textarea.PFSHSocialElement {
+	margin-bottom: 20px;
+}
+
+#PFSHform #PFSHtherapy + input,
+#PFSHform #PFSHread+ input {
     margin-top: 5px;
 }
 
@@ -182,4 +190,8 @@ input[type=checkbox] {
 
 #MDMresult #mdm-codes button {
 	margin: 0 5px;
+}
+
+.validate-alert {
+    border-radius: 4px;
 }
