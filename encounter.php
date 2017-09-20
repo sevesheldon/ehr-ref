@@ -809,27 +809,27 @@ $return = true;
 								<div class="col-sm-9">
 									<label for="PEbp" class="col-sm-8 control-label">Sitting or Standing Blood Pressure</label>
 									<div class="col-sm-4">
-										<input type="text" class="form-control" id="PEbp">
+										<input type="text" class="form-control PEVSElement" id="PEbp" name="PEbp">
 									</div>
 									<label for="PEpr" class="col-sm-8 control-label">Pulse Rate and Regularity</label>
 									<div class="col-sm-4">
-										<input type="text" class="form-control" id="PEpr">
+										<input type="text" class="form-control PEVSElement" id="PEpr" name="PEpr">
 									</div>
 									<label for="PEresp" class="col-sm-8 control-label">Respiration</label>
 									<div class="col-sm-4">
-										<input type="text" class="form-control" id="PEresp">
+										<input type="text" class="form-control PEVSElement" id="PEresp" name="PEresp">
 									</div>
 									<label for="PEtemp" class="col-sm-8 control-label">Temperature</label>
 									<div class="col-sm-4">
-										<input type="text" class="form-control" id="PEtemp">
+										<input type="text" class="form-control PEVSElement" id="PEtemp" name="PEtemp">
 									</div>
 									<label for="PEheight" class="col-sm-8 control-label">Height</label>
 									<div class="col-sm-4">
-										<input type="text" class="form-control" id="PEheight">
+										<input type="text" class="form-control PEVSElement" id="PEheight" name="PEheight">
 									</div>
 									<label for="PEweight" class="col-sm-8 control-label">Weight</label>
 									<div class="col-sm-4">
-										<input type="text" class="form-control" id="PEweight">
+										<input type="text" class="form-control PEVSElement" id="PEweight" name="PEweight">
 									</div>
 								</div>
 							</div>
@@ -1139,7 +1139,7 @@ $return = true;
 							<div class="row" id="PEMoodrow">
 								<label for="PEmood" class="col-sm-3 control-label text-right h4">Mood is:</label>
 								<div class="col-sm-9">
-									<input type="text" value="" id="PEmood" class="form-control">
+									<input type="text" value="" id="PEmood" class="form-control" name="PEmood">
 								</div>
 							</div>
 						</section>
@@ -1230,10 +1230,7 @@ $return = true;
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
     <script src="js/util.js"></script>
 	<script id="formValidation">
-	/* HPIform
-PFSHform
-ROSform
-PEform
+	/* ROSform
 PsychAddonform */
 	</script>
 

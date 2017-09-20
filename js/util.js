@@ -168,6 +168,7 @@ $(document).ready(function(){
 function validateForms() {
 	$("#HPIform").valid();
 	$("#PFSHform").valid();
+	$("#PEform").valid();
 }
 
 function calculateMDM() {

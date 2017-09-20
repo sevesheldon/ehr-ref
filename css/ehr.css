@@ -88,6 +88,10 @@ input[type=checkbox] {
 	margin-bottom: 20px;
 }
 
+#PEform input[type=text].PEVSElement  {
+	margin-bottom: 5px;
+}
+
 #PFSHform #PFSHtherapy + input,
 #PFSHform #PFSHread+ input {
     margin-top: 5px;

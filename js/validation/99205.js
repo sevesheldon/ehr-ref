@@ -45,10 +45,46 @@
 				errorClass: "alert-danger"
 			});
 			
+			$("#PEform").validate({
+				rules: {
+					bodyhabitus: {
+						required: true
+					},
+					PEmood: {
+						required: true
+					}
+				},
+				messages: {
+				},
+				errorPlacement: function(error,element) {
+					return true;
+				},
+				highlight: function( element, errorClass, validClass ) {
+					if ( element.type === "radio" ) {
+						this.findByName( element.name ).parent().parent().addClass( errorClass ).removeClass( validClass );
+					} else if ( element.type === "checkbox" ) {
+						$( element ).parent().parent().addClass( errorClass ).removeClass( validClass );
+					} else {
+						$( element ).addClass( errorClass ).removeClass( validClass );
+					}
+				},
+				unhighlight: function( element, errorClass, validClass ) {
+					if ( element.type === "radio" ) {
+						this.findByName( element.name ).parent().parent().removeClass( errorClass ).addClass( validClass );
+					} else if ( element.type === "checkbox" ) {
+						$( element ).parent().parent().removeClass( errorClass ).addClass( validClass );
+					} else {
+						$( element ).removeClass( errorClass ).addClass( validClass );
+					}
+				},
+				errorClass: "alert-danger"
+			});
+			
 			$.validator.addClassRules({
 				HPIElement: { require_xof_elements: [4, ".HPIElement"] },
 				PFSHFamilyElement: { require_xof_elements: [1, ".PFSHFamilyElement"] },
-				PFSHSocialElement: { require_xof_elements: [1, ".PFSHSocialElement"] }
+				PFSHSocialElement: { require_xof_elements: [1, ".PFSHSocialElement"] },
+				PEVSElement: { require_xof_elements: [3, ".PEVSElement"] }
 			});
 			
 			$.validator.addMethod(
