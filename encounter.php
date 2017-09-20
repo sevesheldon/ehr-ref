@@ -1229,10 +1229,7 @@ $return = true;
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
     <script src="js/util.js"></script>
-	<script id="formValidation">
-	/* ROSform
-PsychAddonform */
-	</script>
+	<script id="formValidation"></script>
 
 </body>
 

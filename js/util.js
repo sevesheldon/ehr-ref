@@ -168,7 +168,9 @@ $(document).ready(function(){
 function validateForms() {
 	$("#HPIform").valid();
 	$("#PFSHform").valid();
+	$("#ROSform").valid();
 	$("#PEform").valid();
+	$("#PsychAddonform").valid();
 }
 
 function calculateMDM() {
