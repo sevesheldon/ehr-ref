@@ -203,10 +203,6 @@ input[type=checkbox] {
 }
 
 .validate-alert {
-	border: 1px solid transparent;
+	border: 1px solid #a94442;
     border-radius: 4px;
-}
-
-.alert-danger {
-	border-color: #a94442;
 }
