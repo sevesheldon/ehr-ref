@@ -1,4 +1,3 @@
-		$(document).ready(function() {
 			$("#HPIform").validate({
 				rules: {
 					HPIname: {
@@ -92,4 +91,3 @@
 				$.validator.methods.require_from_group,
 				""
 			);
-		});

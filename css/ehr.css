@@ -81,6 +81,9 @@ input[type=checkbox] {
     background: #fff;
 }
 
+#chronicconditions {
+	display: none;
+}
 
 #targetcode {
 	width: 105px;

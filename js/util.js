@@ -116,9 +116,8 @@ $(document).ready(function(){
 		$("#targetcode").css("text-align", "center");
 		$("#targetcode").css("font-weight", "700");
 		$("#targetcode").css("font-size", "22px");		
-		$.getScript("js/validation/" + $targetcode + ".js", function(data) {
-			$("#formValidation").append(data);
-			validateForms();
+		$.getScript("js/validation/" + $targetcode + ".js").done(function() {
+			//validateForms();
 		});
 	});
 	
@@ -161,7 +160,7 @@ $(document).ready(function(){
 		$("#MDMriskrx").prop('checked', true);
 		$("#MDMriskdrugtherapy").prop('checked', true);
 		calculateMDM();
-		$("button[value=99205]").click();
+		$("button[value=99215]").click();
 	});
 });
 

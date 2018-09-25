@@ -260,6 +260,46 @@ $return = true;
             <div class="row" id="HPI">
                 <div class="col-sm-12">
                     <h1 class="text-center">History</h1>
+					
+					<section id="chronicconditions">
+						<h2 class="text-center">Status of Chronic Conditions</h2>
+						<h4 class="text-center text-warning"><strong>Must comment on all 3 ONLY if you use this for billing.</strong></h4>
+						<form id="CCform">
+							<section class="clearfix">
+							<div class="form-group col-sm-12">
+								<label for="CC1" class="col-sm-2 control-label">Chronic Condition 1:</label>
+								<div class="col-sm-4">
+									<input type="text" class="form-control chroniccondition CC1" id="CC1" name="CC1">
+								</div>
+								<label for="CC1status" class="col-sm-1 control-label">Status:</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control chroniccondition CC1" id="CC1status" name="CC1status">
+								</div>
+							</div>
+							<div class="form-group col-sm-12">
+								<label for="CC2" class="col-sm-2 control-label">Chronic Condition 2:</label>
+								<div class="col-sm-4">
+									<input type="text" class="form-control chroniccondition CC2" id="CC2" name="CC2">
+								</div>
+								<label for="CC2status" class="col-sm-1 control-label">Status:</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control chroniccondition CC2" id="CC2status" name="CC2status">
+								</div>
+							</div>
+							<div class="form-group col-sm-12">
+								<label for="CC3" class="col-sm-2 control-label">Chronic Condition 3:</label>
+								<div class="col-sm-4">
+									<input type="text" class="form-control chroniccondition CC3" id="CC3" name="CC3">
+								</div>
+								<label for="CC3status" class="col-sm-1 control-label">Status:</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control chroniccondition CC3" id="CC3status" name="CC3status">
+								</div>
+							</div>
+						</section>
+						</form>
+					</section>
+					
 					<h2 class="text-center">HPI</h2>
 					<form id="HPIform">
 						<section class="clearfix">
@@ -1229,8 +1269,6 @@ $return = true;
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
     <script src="js/util.js"></script>
-	<script id="formValidation"></script>
-
 </body>
 
 </html>
